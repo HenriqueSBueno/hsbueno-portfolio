@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ateliê Pedra Fina · Marmoraria sob medida (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para marmoraria de alto padrão, no estilo prancha de projeto. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2F4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F4F1;--grid:rgba(40,60,52,.07);--ink:#1E2A26;--ink-soft:#56645E;--stone:#2F4A3F;--stone-d:#1F332B;--line:#1E2A26;--red:#A6342A;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--stone) var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:Barlow,system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+::selection{background:var(--stone);color:var(--paper)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:#E6ECE8;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:#BFD8CB;font-weight:500}
+.sc{font-family:"Barlow Semi Condensed",sans-serif}
+/* the drawing sheet */
+.sheet{margin:20px 0;border:2px solid var(--line);background:var(--paper) linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px;position:relative}
+.sheet::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none}
+.top{display:flex;justify-content:space-between;gap:12px;padding:0 22px 10px;font-family:"Barlow Semi Condensed";font-weight:500;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.hero{display:grid;gap:10px;padding:26px 22px 18px}
+h1{font-family:"Barlow Semi Condensed";font-weight:300;font-size:clamp(2.6rem,10vw,5.4rem);line-height:.98;letter-spacing:-.02em}
+h1 b{font-weight:700;color:var(--stone)}
+.lead{max-width:44ch;color:var(--ink-soft);font-size:1.08rem;margin-top:12px}
+.plan{width:100%;height:auto;margin:6px 0}
+.plan .dim{font-family:"Barlow Semi Condensed";font-size:13px;fill:var(--ink)}
+.plan .lbl{font-family:"Barlow Semi Condensed";font-size:12px;letter-spacing:.12em;fill:var(--ink-soft)}
+/* title block */
+.tb{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--line);font-size:.92rem}
+.tb div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 12px}
+.tb div:nth-child(2n){border-right:0}
+.tb small{display:block;font-family:"Barlow Semi Condensed";font-weight:500;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.tb .act{grid-column:1/-1;border-right:0;border-bottom:0;background:var(--stone);color:var(--paper);padding:0}
+.btn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;text-decoration:none;font-family:"Barlow Semi Condensed";font-weight:700;font-size:1.25rem;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.btn:hover{background:var(--stone-d)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn small{display:block;font-weight:500;font-size:.78rem;letter-spacing:.08em;color:#E8F0EB}
+/* materials and process */
+h2{font-family:"Barlow Semi Condensed";font-weight:300;font-size:clamp(2rem,6vw,3.2rem);line-height:1;letter-spacing:-.01em}
+h2 b{font-weight:700;color:var(--stone)}
+.sec{padding:52px 0 8px}
+.sec>p{color:var(--ink-soft);max-width:56ch;margin-top:10px}
+.mats{display:grid;gap:0;margin-top:22px;border-top:2px solid var(--line)}
+.mat{display:grid;grid-template-columns:72px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.chip{width:72px;height:72px;border:1px solid var(--line);position:relative;overflow:hidden}
+.chip svg{width:100%;height:100%;display:block}
+.mat h3{font-family:"Barlow Semi Condensed";font-weight:700;font-size:1.3rem;line-height:1.1}
+.mat p{color:var(--ink-soft);font-size:.95rem}
+.mat .code{font-family:"Barlow Semi Condensed";font-weight:500;font-size:.8rem;letter-spacing:.08em;color:var(--ink-soft);margin-left:6px}
+.steps{list-style:none;counter-reset:s;margin-top:22px;display:grid;gap:0;border-left:2px solid var(--line)}
+.steps li{counter-increment:s;position:relative;padding:12px 0 18px 26px}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:-15px;top:10px;width:28px;height:28px;border:2px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center;font-family:"Barlow Semi Condensed";font-weight:700;font-size:.78rem}
+.steps b{font-family:"Barlow Semi Condensed";font-weight:700;font-size:1.2rem;display:block}
+.steps span{color:var(--ink-soft)}
+.close{margin:56px 0 0;background:var(--stone);color:var(--paper);padding:44px 0 50px}
+.close h2 b{color:#CFE3D7}
+.close p{opacity:.9;max-width:46ch;margin:12px 0 22px}
+.close .btn{display:inline-flex;border:2px solid var(--paper)}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:14px}
+footer{background:var(--ink);color:#B9C6BF;font-size:.85rem;padding:18px 0 26px}
+footer a{color:#CFE3D7}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .hero{grid-template-columns:1fr 1.15fr;align-items:center;gap:30px;padding:16px 34px 30px}
+  .tb{grid-template-columns:repeat(4,1fr) 1.4fr}
+  .tb div:nth-child(2n){border-right:1px solid var(--line)}
+  .tb .act{grid-column:auto;border-bottom:1px solid var(--line)}
+  .tb div{border-bottom:0}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main class="wrap">
+  <article class="sheet" aria-labelledby="h1">
+    <div class="hero">
+      <div>
+        <h1 id="h1">Pedra natural, <b>cortada no milímetro</b> do seu projeto.</h1>
+        <p class="lead">Bancadas, ilhas, lavatórios e escadas em mármore, granito e quartzo. Medição a laser na obra, desenho aprovado por você antes do corte.</p>
+      </div>
+      <svg class="plan" viewBox="0 0 560 330" role="img" aria-label="Desenho técnico de uma ilha de cozinha com cotas de 320 por 110 centímetros">
+        <g fill="none" stroke="#1E2A26">
+          <rect x="60" y="70" width="440" height="150" stroke-width="2.5" fill="#E3E8E4"/>
+          <rect x="250" y="105" width="110" height="70" rx="6" stroke-width="1.5"/>
+          <circle cx="305" cy="140" r="5" stroke-width="1.5"/>
+          <rect x="95" y="100" width="90" height="90" rx="4" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <circle cx="118" cy="122" r="12" stroke-width="1"/><circle cx="162" cy="122" r="12" stroke-width="1"/><circle cx="118" cy="168" r="12" stroke-width="1"/><circle cx="162" cy="168" r="12" stroke-width="1"/>
+          <path d="M60 40v20M500 40v20M60 50h440" stroke-width="1"/>
+          <path d="M530 70h20M530 220h20M540 70v150" stroke-width="1"/>
+          <path d="M56 46l8 8M496 46l8 8M536 66l8 8M536 216l8 8" stroke-width="1.5"/>
+          <path d="M60 220l-30 40h80" stroke-width="1"/>
+        </g>
+        <text class="dim" x="280" y="44" text-anchor="middle">3200</text>
+        <text class="dim" x="524" y="150" transform="rotate(-90 524 150)" text-anchor="middle">1100</text>
+        <text class="lbl" x="120" y="276">QUARTZO BRANCO · 20 MM</text>
+        <text class="lbl" x="305" y="200" text-anchor="middle">CUBA ESCULPIDA</text>
+        <text class="lbl" x="140" y="210" text-anchor="middle">COOKTOP</text>
+        <text class="lbl" x="60" y="310">COTAS EM MM · ESCALA 1:25</text>
+      </svg>
+    </div>
+    <div class="top"><span>Ateliê Pedra Fina · Marmoraria</span><span>Prancha 01/01</span></div>
+    <div class="tb">
+      <div><small>Projeto</small>Ilha gourmet</div>
+      <div><small>Prazo médio</small>15 dias úteis</div>
+      <div><small>Medição</small>a laser, na obra</div>
+      <div><small>Garantia</small>5 anos na instalação</div>
+      <div class="act"><a class="btn wa" href="#"><span>Agendar medição<small>pelo WhatsApp, sem compromisso</small></span><svg aria-hidden="true"><use href="#wa"/></svg></a></div>
+    </div>
+  </article>
+
+  <section class="sec two" aria-labelledby="mat">
+    <div>
+      <h2 id="mat">Materiais <b>em estoque</b></h2>
+      <p class="fine" style="font-size:1rem;margin-top:10px">Visite o showroom e escolha a chapa inteira. A peça que você vê é a peça que vai para a sua casa.</p>
+      <div class="mats">
+        <div class="mat"><span class="chip"><svg viewBox="0 0 72 72" aria-hidden="true"><rect width="72" height="72" fill="#F4F3EF"/><path d="M-4 20C16 14 30 30 76 18M-4 52c20-6 40 8 80-4" stroke="#9AA3A0" stroke-width="1.4" fill="none"/></svg></span><div><h3>Mármore Carrara <span class="code">MR-01</span></h3><p>Branco com veios cinza. Lavabos e salas.</p></div></div>
+        <div class="mat"><span class="chip"><svg viewBox="0 0 72 72" aria-hidden="true"><rect width="72" height="72" fill="#1F2A26"/><g fill="#5E7A6C"><circle cx="12" cy="14" r="2"/><circle cx="40" cy="22" r="1.6"/><circle cx="58" cy="48" r="2.2"/><circle cx="22" cy="54" r="1.4"/><circle cx="50" cy="8" r="1.2"/></g></svg></span><div><h3>Granito Verde Ubatuba <span class="code">GR-07</span></h3><p>Resistente, ótimo para cozinhas de uso intenso.</p></div></div>
+        <div class="mat"><span class="chip"><svg viewBox="0 0 72 72" aria-hidden="true"><rect width="72" height="72" fill="#ECEAE5"/><g fill="#CFCBC2"><circle cx="18" cy="20" r="1"/><circle cx="44" cy="34" r="1"/><circle cx="60" cy="14" r="1"/><circle cx="28" cy="58" r="1"/></g></svg></span><div><h3>Quartzo Branco <span class="code">QZ-03</span></h3><p>Não mancha, não precisa de impermeabilização.</p></div></div>
+        <div class="mat"><span class="chip"><svg viewBox="0 0 72 72" aria-hidden="true"><rect width="72" height="72" fill="#3A3633"/><path d="M-4 30c24 10 44-12 80 4M-4 60c30-8 50 6 80-6" stroke="#B9A98F" stroke-width="1.6" fill="none"/></svg></span><div><h3>Quartzito Taj Mahal <span class="code">QT-11</span></h3><p>Natural e resistente como granito, com visual de mármore.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <h2>Do desenho <b>à instalação</b></h2>
+      <ol class="steps">
+        <li><b>Medição na obra</b><span>Equipe técnica mede a laser e confere prumo e nível.</span></li>
+        <li><b>Desenho para aprovação</b><span>Você recebe a prancha com cotas, cubas e recortes.</span></li>
+        <li><b>Escolha da chapa</b><span>No showroom, com a chapa inteira à vista.</span></li>
+        <li><b>Corte e acabamento</b><span>Bordas, nichos e cubas esculpidas na fábrica.</span></li>
+        <li><b>Instalação limpa</b><span>Com proteção da obra e retirada das sobras.</span></li>
+      </ol>
+    </div>
+  </section>
+</main>
+<section class="close" aria-labelledby="fin">
+  <div class="wrap">
+    <h2 id="fin">Seu projeto merece <b>uma pedra à altura.</b></h2>
+    <p>Mande a planta ou fotos do ambiente pelo WhatsApp. Agendamos a medição e entregamos o desenho para aprovação.</p>
+    <a class="btn wa" href="#"><span>Falar com o ateliê</span><svg aria-hidden="true"><use href="#wa"/></svg></a>
+    <p class="fine" style="color:#CFE3D7">Negócio, endereço e prazos fictícios, criados para demonstração.</p>
+  </div>
+</section>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da marmoraria (estilo prancha de projeto) e quero uma página assim para o meu negócio.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

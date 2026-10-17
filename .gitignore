@@ -1,1 +1,7 @@
+shots/
+.impeccable/review/
+.impeccable/proto-review/
+.impeccable/qb/
+.impeccable/*.png
+.impeccable/live/
 .vercel

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alicerce Engenharia · Construção e reforma (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para construtora, no estilo placa de obra. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F6B3A">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0F6B3A;--green-d:#0A4D29;--yellow:#F5C400;--white:#FFFFFF;--ink:#101511;--ink-soft:#46524A;--site:#C9C2B3;--soil:#8C7B63;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--green) var(--site)}
+body{background:var(--site);color:var(--ink);font-family:Archivo,system-ui,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+::selection{background:var(--yellow);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:#E5E9E6;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--yellow);font-weight:700}
+.blk{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em}
+/* the site sign on two posts */
+.signwrap{padding:26px 0 0;position:relative}
+.placa{background:var(--white);border:4px solid var(--ink);position:relative;z-index:1}
+.ph{background:var(--green);color:var(--white);padding:16px 16px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ph .blk{font-size:clamp(1.2rem,5vw,1.8rem);line-height:1}
+.ph span{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#CFE7D8}
+.pb{padding:18px 16px 20px}
+.pb h1{font-size:clamp(1.9rem,8.4vw,5rem);line-height:.95;color:var(--green)}
+.pb .lead{margin-top:12px;max-width:46ch;color:var(--ink-soft);font-size:1.08rem}
+.fields{display:grid;grid-template-columns:1fr 1fr;border-top:4px solid var(--ink)}
+.fields div{padding:10px 14px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.fields div:nth-child(2n){border-right:0}
+.fields small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.fields b{font-weight:700}
+.pf{background:var(--yellow);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px}
+.pf p{font-weight:700;max-width:30ch}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--yellow);font-family:"Archivo Black";text-transform:uppercase;font-size:1.05rem;padding:14px 20px;text-decoration:none;border:3px solid var(--ink);transition:background .2s,color .2s}
+.btn:hover{background:var(--green);color:var(--white)}
+.btn svg{width:22px;height:22px}
+.posts{display:flex;justify-content:space-around;height:46px;margin-top:-2px}
+.posts i{width:18px;background:var(--soil);border:3px solid var(--ink);border-top:0;display:block}
+.ground{height:14px;background:var(--soil);border-top:3px solid var(--ink)}
+.sec{background:var(--white);padding:44px 0}
+.sec h2{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1;color:var(--green)}
+.sec .intro{color:var(--ink-soft);max-width:56ch;margin-top:8px}
+.etapas{list-style:none;margin-top:22px;display:grid;gap:0;border-top:3px solid var(--ink)}
+.etapas li{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid #D5D9D6}
+.etapas .pct{font-family:"Archivo Black";font-size:1.4rem;color:var(--green);width:4.2ch}
+.etapas b{display:block}
+.etapas span{color:var(--ink-soft);font-size:.95rem}
+.etapas .bar{width:90px;height:10px;border:2px solid var(--ink);position:relative}
+.etapas .bar i{position:absolute;inset:0 auto 0 0;background:var(--green);display:block}
+.servs{display:grid;gap:12px;margin-top:22px}
+.servs div{border:3px solid var(--ink);padding:14px 16px}
+.servs b{font-family:"Archivo Black";text-transform:uppercase;font-size:1.05rem;display:block;color:var(--green)}
+.servs p{color:var(--ink-soft);font-size:.95rem;margin-top:4px}
+.close{background:var(--green);color:var(--white);padding:40px 0 46px}
+.close h2{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1}
+.close p{opacity:.92;margin:10px 0 18px;max-width:46ch}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:14px}
+footer{background:var(--ink);color:#B9C2BC;font-size:.85rem;padding:18px 0 26px}
+footer a{color:var(--yellow)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .pb{padding:26px 30px 28px}
+  .fields{grid-template-columns:repeat(4,1fr)}
+  .fields div,.fields div:nth-child(2n){border-right:2px solid var(--ink);border-bottom:0}
+  .fields div:last-child{border-right:0}
+  .pf{padding:16px 30px}
+  .posts{justify-content:space-between;padding:0 12%}
+  .two{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+  .servs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<section class="signwrap" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="placa">
+      <div class="ph"><span class="blk">Alicerce Engenharia</span><span>Construção · Reforma</span></div>
+      <div class="pb">
+        <h1 id="h1" class="blk">Sua obra com prazo, preço e engenheiro responsável.</h1>
+        <p class="lead">Casas de alto padrão e reformas completas com cronograma por escrito e acompanhamento semanal com fotos.</p>
+      </div>
+      <div class="fields">
+        <div><small>Responsável técnico</small><b>Eng. Marcos Tavares</b></div>
+        <div><small>Registro</small><b>CREA-SP 0000000000</b></div>
+        <div><small>Obras entregues</small><b>exemplo fictício</b></div>
+        <div><small>Atendimento</small><b>região de Rio Preto</b></div>
+      </div>
+      <div class="pf"><p>Orçamento com visita técnica, sem compromisso.</p><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+    </div>
+    <div class="posts" aria-hidden="true"><i></i><i></i></div>
+  </div>
+  <div class="ground" aria-hidden="true"></div>
+</section>
+<section class="sec" aria-labelledby="et">
+  <div class="wrap two">
+    <div>
+      <h2 id="et" class="blk">Andamento da obra, toda semana</h2>
+      <p class="intro">Você acompanha cada etapa pelo WhatsApp, com fotos e porcentagem concluída.</p>
+      <ol class="etapas">
+        <li><span class="pct">100%</span><div><b>Fundação</b><span>Estacas e baldrame</span></div><span class="bar"><i style="width:100%"></i></span></li>
+        <li><span class="pct">100%</span><div><b>Estrutura</b><span>Pilares, vigas e laje</span></div><span class="bar"><i style="width:100%"></i></span></li>
+        <li><span class="pct">60%</span><div><b>Alvenaria e instalações</b><span>Elétrica e hidráulica</span></div><span class="bar"><i style="width:60%"></i></span></li>
+        <li><span class="pct">0%</span><div><b>Acabamento</b><span>Pisos, pintura e louças</span></div><span class="bar"><i style="width:0%"></i></span></li>
+      </ol>
+      <p class="fine" style="margin-bottom:34px">Cronograma ilustrativo.</p>
+    </div>
+    <div>
+      <h2 class="blk">O que fazemos</h2>
+      <div class="servs">
+        <div><b>Construção</b><p>Casas térreas e sobrados, do projeto à entrega das chaves.</p></div>
+        <div><b>Reforma completa</b><p>Cozinha, banheiros e ampliações com a casa protegida.</p></div>
+        <div><b>Regularização</b><p>Projeto, alvará e habite-se.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="close" aria-labelledby="fin">
+  <div class="wrap">
+    <h2 id="fin" class="blk">Comece pela visita técnica.</h2>
+    <p>Mande a localização do terreno ou fotos do imóvel. Marcamos a visita e entregamos o orçamento detalhado.</p>
+    <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar visita</a>
+    <p class="fine" style="color:#CFE7D8">Empresa, engenheiro e registro fictícios, criados para demonstração.</p>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da construtora (estilo placa de obra) e quero uma página assim.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

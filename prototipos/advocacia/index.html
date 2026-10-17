@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moraes Lacerda Advocacia (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para escritório de advocacia, no estilo capa de autos. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#22385A">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--capa:#22385A;--capa-d:#172742;--label:#F5F1E6;--paper:#FBFAF6;--ink:#1B1F27;--ink-soft:#4F5563;--stamp:#8E2F2A;--tab:#C9A44C;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--capa) var(--paper)}
+body{background:var(--capa-d);color:var(--ink);font-family:Literata,Georgia,serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+::selection{background:var(--tab);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:2px solid var(--tab);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:#0E1626;color:#DCE2EE;font-family:"Archivo Narrow",sans-serif;font-size:.88rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--tab);font-weight:700}
+.n{font-family:"Archivo Narrow",sans-serif}
+/* the docket cover */
+.capa{background:var(--capa);color:var(--label);margin:24px 0 0;padding:22px 18px 26px;position:relative;border-radius:2px;box-shadow:0 24px 40px -24px rgba(0,0,0,.8)}
+.capa::after{content:"AUTOS Nº 0042";position:absolute;right:22px;top:-22px;padding:4px 12px 3px;background:var(--tab);color:var(--ink);border-radius:3px 3px 0 0;font-family:"Archivo Narrow";font-weight:700;font-size:.75rem;letter-spacing:.1em}
+.court{display:flex;justify-content:space-between;gap:12px;font-family:"Archivo Narrow";font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:#BFC9DB}
+.etq{background:var(--label);color:var(--ink);margin-top:18px;padding:16px 16px 18px;border:1px solid #D8D1BE}
+.etq .row{display:grid;grid-template-columns:110px 1fr;gap:8px;border-bottom:1px solid #D8D1BE;padding:6px 0;font-size:.95rem}
+.etq .row span:first-child{font-family:"Archivo Narrow";font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.75rem;color:var(--ink-soft);padding-top:3px}
+.etq .num{font-family:"Archivo Narrow";font-weight:700;font-size:1.05rem;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.capa h1{font-weight:600;font-size:clamp(2.1rem,7.5vw,3.8rem);line-height:1.08;letter-spacing:-.01em;margin:26px 0 12px;max-width:18ch;color:#fff}
+.capa .lead{max-width:50ch;color:#D9DFEA}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--label);color:var(--ink);font-family:"Archivo Narrow";font-weight:700;font-size:1.1rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 22px;text-decoration:none;border:2px solid var(--label);transition:background .2s,color .2s;margin-top:22px}
+.btn:hover{background:transparent;color:var(--label)}
+.btn svg{width:22px;height:22px}
+.carimbo{position:absolute;right:18px;bottom:24px;border:3px double var(--tab);color:var(--tab);font-family:"Archivo Narrow";font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;padding:6px 10px;transform:rotate(-6deg);text-align:center;line-height:1.2;display:none}
+/* the petition pages */
+.autos{background:var(--paper);padding:34px 18px 40px;margin:0 0 24px;border-top:1px solid #DDD7C6}
+.fls{display:flex;justify-content:flex-end;font-family:"Archivo Narrow";font-size:.8rem;color:var(--ink-soft);letter-spacing:.06em}
+.autos h2{font-weight:600;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.15;margin:8px 0 18px}
+.areas{list-style:none;display:grid;gap:0;border-top:1px solid var(--ink)}
+.areas li{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid #D9D4C6}
+.areas .p{font-family:"Archivo Narrow";font-weight:700;color:var(--stamp);font-size:1.05rem}
+.areas b{font-weight:600;display:block;font-size:1.1rem}
+.areas span{color:var(--ink-soft);font-size:.98rem}
+.team{display:grid;gap:14px;margin-top:8px}
+.adv{border:1px solid #D9D4C6;padding:14px 16px;background:#fff}
+.adv b{display:block;font-weight:600;font-size:1.1rem}
+.adv small{font-family:"Archivo Narrow";letter-spacing:.06em;color:var(--ink-soft);font-size:.85rem}
+.adv p{margin-top:6px;color:var(--ink-soft);font-size:.95rem}
+.term{margin-top:34px;padding-top:18px;border-top:1px solid var(--ink)}
+.term p{color:var(--ink-soft);max-width:60ch}
+.term .btn{background:var(--capa);color:var(--label);border-color:var(--capa)}
+.term .btn:hover{background:transparent;color:var(--capa)}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:14px;font-family:"Archivo Narrow"}
+footer{color:#AEB9CC;font-family:"Archivo Narrow";font-size:.88rem;padding:10px 0 30px}
+footer a{color:var(--tab)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .capa{padding:30px 40px 40px}
+  .carimbo{display:block;right:44px;bottom:48px}
+  .autos{padding:46px 56px 56px}
+  .cols{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main class="wrap">
+  <section class="capa" aria-labelledby="h1">
+    <div class="court"><span>Moraes Lacerda Advocacia</span><span>Desde 2009</span></div>
+    <div class="etq">
+      <div class="row"><span>Escritório</span><span class="num">Moraes Lacerda Advocacia</span></div>
+      <div class="row"><span>Atuação</span><span>Empresarial · Trabalhista · Família e Sucessões</span></div>
+      <div class="row"><span>Atendimento</span><span>Presencial e on-line, com hora marcada</span></div>
+    </div>
+    <h1 id="h1">Cada caso tratado como um processo único, com atenção do primeiro ao último dia.</h1>
+    <p class="lead">Advogados que explicam cada etapa em linguagem clara, informam os prazos e respondem as suas dúvidas.</p>
+    <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar uma consulta</a>
+    <div class="carimbo" aria-hidden="true">Atendimento<br>com hora marcada</div>
+  </section>
+  <section class="autos" aria-labelledby="areas">
+    <div class="fls">fls. 02</div>
+    <div class="cols">
+      <div>
+        <h2 id="areas">Áreas de atuação</h2>
+        <ol class="areas">
+          <li><span class="p">I.</span><div><b>Direito empresarial</b><span>Contratos, societário, recuperação de crédito e assessoria contínua para empresas.</span></div></li>
+          <li><span class="p">II.</span><div><b>Direito do trabalho</b><span>Defesa de empresas, prevenção de passivo e acordos.</span></div></li>
+          <li><span class="p">III.</span><div><b>Família e sucessões</b><span>Divórcio, inventário, planejamento sucessório e holding familiar.</span></div></li>
+          <li><span class="p">IV.</span><div><b>Imobiliário</b><span>Compra e venda, regularização e locação.</span></div></li>
+        </ol>
+      </div>
+      <div>
+        <h2>Advogados responsáveis</h2>
+        <div class="team">
+          <div class="adv"><b>Dra. Helena Moraes</b><small>OAB/SP 000.000 · sócia</small><p>Atua em direito empresarial e societário.</p></div>
+          <div class="adv"><b>Dr. Paulo Lacerda</b><small>OAB/SP 000.000 · sócio</small><p>Atua em família, sucessões e imobiliário.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="term">
+      <h2>Como funciona a primeira conversa</h2>
+      <p>Você descreve a situação pelo WhatsApp, marcamos uma consulta e apresentamos as opções possíveis para o seu caso, com honorários combinados por escrito.</p>
+      <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Falar com o escritório</a>
+      <p class="fine">Escritório, advogados e números de OAB fictícios, criados para demonstração. Conteúdo informativo, em linha com as regras de publicidade da OAB.</p>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo do escritório de advocacia (estilo capa de autos) e quero uma página assim.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chaveiro Ponto Certo · 24 horas (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para chaveiro 24h, no estilo lista telefônica. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F2D338">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800;900&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--page:#F2D338;--page-2:#EBC92A;--ink:#151515;--ink-soft:#3a3420;--paper:#FFFCEB;--red:#C21F17;--rule:rgba(21,21,21,.35);--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--ink) var(--page)}
+body{background:var(--page);color:var(--ink);font-family:Barlow,system-ui,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+::selection{background:var(--ink);color:var(--page)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.cond{font-family:"Barlow Condensed",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:var(--paper);font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--page);font-weight:700}
+/* running head like a directory page */
+.runhead{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding:14px 0 6px;gap:12px}
+.runhead b{font-family:"Barlow Condensed";font-weight:900;font-size:1.9rem;letter-spacing:.01em;line-height:1}
+.runhead span{font-family:"Barlow Condensed";font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase}
+.cols{columns:2;column-gap:18px;column-rule:1px solid var(--rule);padding:8px 0;font-size:.86rem;line-height:1.35}
+.cols p{break-inside:avoid;display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--rule);padding:3px 0}
+.cols p span:last-child{font-weight:700;white-space:nowrap}
+/* the display ad */
+.ad{background:var(--paper);border:4px solid var(--ink);margin:14px 0;position:relative;display:grid}
+.ad-top{background:var(--ink);color:var(--page);display:flex;justify-content:space-between;align-items:center;padding:8px 14px;font-family:"Barlow Condensed";font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.9rem}
+.ad-body{padding:18px 16px 20px}
+.ad h1{font-family:"Barlow Condensed";font-weight:900;text-transform:uppercase;font-size:clamp(3.4rem,15vw,7rem);line-height:.86;letter-spacing:-.01em}
+.ad h1 em{font-style:normal;color:var(--red)}
+.ad .sub{font-size:1.15rem;margin:14px 0 18px;max-width:34ch}
+.phone{display:flex;flex-direction:column;background:var(--red);color:var(--paper);text-decoration:none;border:3px solid var(--ink);padding:12px 16px;transition:background .2s}
+.phone:hover{background:#A3180F}
+.phone small{font-family:"Barlow Condensed";font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem}
+.phone b{font-family:"Barlow Condensed";font-weight:900;font-size:clamp(2rem,9vw,3rem);line-height:1;letter-spacing:.01em}
+.ad .chips{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:16px;font-family:"Barlow Condensed";font-weight:700;font-size:1.05rem;text-transform:uppercase}
+.ad .chips span{border-bottom:3px solid var(--page)}
+.circle{position:absolute;right:10px;top:-30px;background:var(--paper);z-index:2;width:96px;height:96px;border:3px solid var(--red);border-radius:50%;transform:rotate(-8deg);display:grid;place-items:center;text-align:center;color:var(--red);font-family:"Barlow Condensed";font-weight:900;font-size:1.05rem;line-height:1}
+/* sections as directory headings */
+.head{font-family:"Barlow Condensed";font-weight:900;text-transform:uppercase;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1;border-top:6px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0 6px;margin-top:44px}
+.services{display:grid;gap:0;margin-top:6px}
+.svc{display:grid;grid-template-columns:1fr auto;gap:4px 12px;border-bottom:1px solid var(--rule);padding:12px 0;align-items:baseline}
+.svc h3{font-family:"Barlow Condensed";font-weight:800;font-size:1.45rem;line-height:1.1}
+.svc p{grid-column:1/-1;color:var(--ink-soft);font-size:.98rem;max-width:60ch}
+.svc .t{font-family:"Barlow Condensed";font-weight:700;font-size:1.05rem;white-space:nowrap}
+.svc .t.hot{color:#8E140D}
+.how{display:grid;gap:14px;margin-top:14px}
+.how li{list-style:none;background:var(--paper);border:2px solid var(--ink);padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.how .n{font-family:"Barlow Condensed";font-weight:900;font-size:2.2rem;line-height:.9;color:var(--red)}
+.how b{display:block;font-family:"Barlow Condensed";font-weight:800;font-size:1.3rem;line-height:1.1}
+.area{margin-top:14px;columns:2;column-gap:18px;column-rule:1px solid var(--rule);font-family:"Barlow Condensed";font-weight:700;font-size:1.15rem;text-transform:uppercase}
+.area span{display:block;padding:4px 0;border-bottom:1px dotted var(--rule)}
+.note{font-size:.88rem;color:var(--ink-soft);margin-top:10px}
+.final{background:var(--ink);color:var(--page);margin:48px 0 0;padding:44px 0 56px}
+.final h2{font-family:"Barlow Condensed";font-weight:900;text-transform:uppercase;font-size:clamp(2.4rem,9vw,4.4rem);line-height:.9}
+.final p{color:var(--paper);margin:12px 0 20px;max-width:40ch}
+.final .phone{max-width:420px}
+footer{background:var(--ink);color:#bdb38a;border-top:1px solid #333;font-size:.85rem;padding:18px 0 28px}
+footer a{color:var(--page)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .cols{columns:3}
+  .ad{grid-template-columns:1.4fr 1fr}
+  .ad-top{grid-column:1/-1;grid-row:2}
+  .ad-side{border-left:4px solid var(--ink);padding:18px 16px;display:flex;flex-direction:column;gap:12px;justify-content:center;background:var(--page-2)}
+  .circle{right:24px;top:58px;width:110px;height:110px}
+  .services{grid-template-columns:1fr 1fr;column-gap:36px}
+  .how{grid-template-columns:repeat(3,1fr)}
+  .area{columns:4}
+}
+@media (max-width:759px){.ad-side{padding:0 16px 18px}}
+</style>
+</head>
+<body>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<div class="wrap">
+  <header class="runhead"><b>CHAVEIROS</b><span>Guia de serviços · Pág. 214</span></header>
+  <div class="cols" aria-hidden="true">
+    <p><span>Chave Mestra Serviços</span><span>(17) 3137-7959</span></p>
+    <p><span>Chaveiro Central</span><span>(17) 3274-8918</span></p>
+    <p><span>Chaves &amp; Cia</span><span>(17) 3411-9877</span></p>
+    <p><span>Chaveiro do Bairro</span><span>(17) 3548-0836</span></p>
+    <p><span>Cópia Rápida</span><span>(17) 3685-1795</span></p>
+    <p><span>Chaveiro Express</span><span>(17) 3822-2754</span></p>
+  </div>
+
+  <main>
+  <article class="ad" aria-labelledby="h1">
+    <div class="ad-body">
+      <h1 id="h1">Trancou <em>lá fora?</em></h1>
+      <p class="sub">Abertura de porta, carro e cofre em 30 minutos na sua região. De dia, de madrugada e no feriado.</p>
+      <a class="phone wa" href="#"><small>Chame no WhatsApp agora</small><b>Pedir chaveiro</b></a>
+      <div class="chips"><span>Sem quebrar a fechadura</span><span>Preço antes de sair</span></div>
+    </div>
+    <div class="ad-side">
+      <p class="cond" style="font-weight:800;font-size:1.3rem;line-height:1.3">Desde 1998 no mesmo endereço. Atendimento com nota fiscal.</p>
+      <p style="font-size:.95rem">Rua das Acácias, 410 · Centro<br>Oficina aberta seg. a sáb., 8h às 18h. Plantão 24h por WhatsApp.</p>
+    </div>
+    <div class="circle" aria-hidden="true">CHEGA EM<br>30 MIN</div>
+    <div class="ad-top"><span>Chaveiro Ponto Certo</span><span>Aberto 24h</span></div>
+  </article>
+
+  <h2 class="head">Serviços</h2>
+  <div class="services">
+    <div class="svc"><h3>Abertura de portas</h3><span class="t hot">a partir de 30 min</span><p>Casa, apartamento e comércio. Abrimos sem estragar a porta.</p></div>
+    <div class="svc"><h3>Chave de carro</h3><span class="t">codificada ou simples</span><p>Cópia e programação de chave com chip para a maioria das marcas.</p></div>
+    <div class="svc"><h3>Troca de fechadura</h3><span class="t">na hora</span><p>Fechaduras comuns, tetra e digitais. Levamos as peças no carro.</p></div>
+    <div class="svc"><h3>Cópia de chaves</h3><span class="t">na oficina</span><p>Tetra, gorja, cofre e controle de portão.</p></div>
+    <div class="svc"><h3>Abertura de cofre</h3><span class="t">com agendamento</span><p>Cofres mecânicos e eletrônicos, com sigilo.</p></div>
+    <div class="svc"><h3>Fechadura digital</h3><span class="t">instalação</span><p>Instalamos e configuramos senha e biometria.</p></div>
+  </div>
+
+  <h2 class="head">Como funciona</h2>
+  <ol class="how">
+    <li><span class="n">1</span><span><b>Manda uma mensagem</b>Diga o endereço e o que aconteceu.</span></li>
+    <li><span class="n">2</span><span><b>Recebe o preço</b>Você sabe o valor antes de o chaveiro sair.</span></li>
+    <li><span class="n">3</span><span><b>Chegamos rápido</b>Em média 30 minutos no centro e bairros próximos.</span></li>
+  </ol>
+
+  <h2 class="head">Bairros atendidos</h2>
+  <div class="area"><span>Centro</span><span>Boa Vista</span><span>Redentora</span><span>Jardim Paulista</span><span>Vila Nova</span><span>São Francisco</span><span>Parque Industrial</span><span>Eldorado</span></div>
+  <p class="note">Negócio, endereço e bairros fictícios, criados para demonstração.</p>
+  </main>
+</div>
+
+<section class="final" aria-labelledby="fin">
+  <div class="wrap">
+    <h2 id="fin">Ficou do lado de fora? A gente resolve.</h2>
+    <p>Chaveiro 24 horas, com preço combinado antes e chegada rápida.</p>
+    <a class="phone wa" href="#"><small>WhatsApp 24 horas</small><b>Pedir chaveiro</b></a>
+  </div>
+</section>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo do chaveiro (estilo lista telefônica) e quero uma página assim para o meu negócio.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

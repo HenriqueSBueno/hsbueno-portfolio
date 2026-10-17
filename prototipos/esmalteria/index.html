@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Esmalteria Cor &amp; Cia · Unhas e cuidados (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para esmalteria, no estilo cartela de cores. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F1ECE6">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<style>
+:root{--card:#FFFFFF;--ground:#E9E4F2;--ink:#221B2E;--ink-soft:#5A516B;--c1:#C2255C;--c2:#F08C8C;--c3:#8C3B9E;--c4:#E8590C;--c5:#1F6E6E;--c6:#F2C6D6;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--c3) var(--ground)}
+body{background:var(--ground);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+::selection{background:var(--c1);color:#fff}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c3);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:#eee;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--c6);font-weight:700}
+/* the swatch fan */
+.hero{padding:30px 0 10px}
+.strip{background:var(--card);border-radius:14px;padding:12px;box-shadow:0 18px 30px -18px rgba(34,27,46,.5);display:grid;gap:10px}
+.chip{border-radius:8px;min-height:64px;display:flex;justify-content:space-between;align-items:flex-end;padding:8px 10px;color:#fff;font-weight:700;font-stretch:85%;font-size:.85rem}
+.chip span:last-child{font-variant-numeric:tabular-nums}
+.chip.light{color:var(--ink)}
+.big{background:var(--c1);color:#fff;border-radius:8px;padding:22px 18px 20px}
+.big h1{font-weight:800;font-stretch:75%;font-size:clamp(3rem,13vw,6rem);line-height:.9;letter-spacing:-.02em}
+.big p{font-size:1.1rem;margin:12px 0 18px;max-width:34ch}
+.code{display:block;margin-top:16px;font-weight:700;font-stretch:80%;font-size:.85rem;letter-spacing:.06em}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;font-size:1.05rem;padding:13px 22px;border-radius:999px;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:#fff;color:var(--ink)}
+.btn svg{width:22px;height:22px}
+/* services as a color card */
+.svc{padding:40px 0}
+.svc h2{font-weight:800;font-stretch:75%;font-size:clamp(2.2rem,8vw,3.6rem);line-height:.95;letter-spacing:-.02em}
+.svc>.wrap>p{color:var(--ink-soft);margin:8px 0 20px;max-width:44ch}
+.card{background:var(--card);border-radius:14px;padding:10px;display:grid;gap:8px}
+.row{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;padding:6px;border-radius:10px}
+.row .sw{height:64px;border-radius:8px}
+.row b{display:block;font-size:1.1rem;font-weight:700}
+.row small{color:var(--ink-soft)}
+.row .p{font-weight:800;font-stretch:80%;font-size:1.2rem;font-variant-numeric:tabular-nums}
+.week{background:var(--c3);color:#fff;padding:40px 0;margin-top:10px}
+.week .wrap{display:grid;gap:18px}
+.week h2{font-weight:800;font-stretch:75%;font-size:clamp(2rem,7vw,3.2rem);line-height:.95}
+.dots{display:flex;gap:8px;flex-wrap:wrap}
+.dots i{width:44px;height:44px;border-radius:50%;border:3px solid #fff;display:block}
+.info{padding-top:40px;padding-bottom:50px;display:grid;gap:18px}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.info dt{font-weight:700}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:10px}
+footer{background:var(--ink);color:#C9C2D6;font-size:.85rem;padding:18px 0 26px}
+footer a{color:var(--c6)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .strip{grid-template-columns:3.4fr repeat(5,1fr);align-items:stretch}
+  .strip .chip{min-height:auto;flex-direction:column;align-items:flex-start;justify-content:flex-end;writing-mode:vertical-rl;transform:rotate(180deg)}
+  .card{grid-template-columns:1fr 1fr}
+  .week .wrap{grid-template-columns:1.2fr 1fr;align-items:center}
+  .info{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. Preços ilustrativos. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="strip">
+      <div class="big">
+        <h1 id="h1">Unha feita, dia ganho.</h1>
+        <p>Esmalteria com hora marcada. Manicure, pedicure e alongamento, com cartela nova toda semana.</p>
+        <a class="btn light wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar horário</a>
+        <span class="code">Esmalteria Cor &amp; Cia · cor nº 01 Framboesa</span>
+      </div>
+      <div class="chip light" style="background:var(--c2)"><span>Coral</span><span>02</span></div>
+      <div class="chip" style="background:var(--c3)"><span>Ameixa</span><span>03</span></div>
+      <div class="chip light" style="background:var(--c4)"><span>Tangerina</span><span>04</span></div>
+      <div class="chip" style="background:var(--c5)"><span>Laguna</span><span>05</span></div>
+      <div class="chip light" style="background:var(--c6)"><span>Bailarina</span><span>06</span></div>
+    </div>
+  </div>
+</section>
+<section class="svc" aria-labelledby="sv">
+  <div class="wrap">
+    <h2 id="sv">Cartela de serviços</h2>
+    <p>Cada serviço tem sua cor. Escolha, mande a cor no WhatsApp e a gente reserva seu horário.</p>
+    <div class="card">
+      <div class="row"><span class="sw" style="background:var(--c1)"></span><span><b>Mão</b><small>Cutícula, esmalte e hidratação</small></span><span class="p">R$ 35</span></div>
+      <div class="row"><span class="sw" style="background:var(--c2)"></span><span><b>Pé</b><small>Com esfoliação</small></span><span class="p">R$ 40</span></div>
+      <div class="row"><span class="sw" style="background:var(--c3)"></span><span><b>Pé e mão</b><small>O combo da semana</small></span><span class="p">R$ 65</span></div>
+      <div class="row"><span class="sw" style="background:var(--c4)"></span><span><b>Esmaltação em gel</b><small>Dura até 3 semanas</small></span><span class="p">R$ 70</span></div>
+      <div class="row"><span class="sw" style="background:var(--c5)"></span><span><b>Alongamento</b><small>Fibra ou molde F1</small></span><span class="p">R$ 140</span></div>
+      <div class="row"><span class="sw" style="background:var(--c6)"></span><span><b>Spa dos pés</b><small>Parafina e massagem</small></span><span class="p">R$ 55</span></div>
+    </div>
+  </div>
+</section>
+<section class="week" aria-labelledby="wk">
+  <div class="wrap">
+    <div><h2 id="wk">Cores da semana</h2><p style="margin-top:8px">Toda segunda chega uma cartela nova. As clientes do WhatsApp veem primeiro.</p></div>
+    <div class="dots" aria-hidden="true"><i style="background:#9C2B4E"></i><i style="background:#E7A977"></i><i style="background:#3D5A80"></i><i style="background:#CDB4DB"></i><i style="background:#2D6A4F"></i><i style="background:#F5CAC3"></i></div>
+  </div>
+</section>
+<div class="wrap info">
+  <div><h2 style="font-weight:800;font-stretch:75%;font-size:2rem;line-height:1">Onde estamos</h2><p style="margin-top:6px">Rua das Palmeiras, 51 · Jardim América</p><p class="fine">Negócio, endereço e preços fictícios, criados para demonstração.</p></div>
+  <div><dl><dt>Ter. a sáb.</dt><dd>9h às 19h</dd><dt>Domingo</dt><dd>só com agendamento</dd></dl><p style="margin-top:16px"><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar no WhatsApp</a></p></div>
+</div>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da esmalteria (estilo cartela de cores) e quero uma página assim para o meu negócio.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

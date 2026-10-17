@@ -1,0 +1,117 @@
+{
+  "title": "Escolha o mundo visual",
+  "question": "O sorteio indicou a Lista Telefônica. Fique com ela, escolha uma alternativa ou sorteie de novo.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Lista Telefônica",
+      "kicker": "THE ROLL",
+      "lineage": "listas telefônicas e guias comerciais impressos (anos 80-2000)",
+      "thesis": "Antes, ser encontrado era estar na lista; hoje é estar no Google, e a página é o anúncio em destaque.",
+      "palette": ["#F2D338", "#141414", "#FFFDF2", "#C8281E"],
+      "materials": ["papel jornal amarelo", "colunas com fios finos", "anúncio em quadro"],
+      "viewport": "Uma página da lista: dezenas de linhas miúdas em colunas e um único anúncio emoldurado gigante, o seu, com o WhatsApp como número em negrito.",
+      "risk": "Pode soar nostálgico para quem tem menos de 30; precisa ler como hoje, não como museu.",
+      "raised": [
+        {"from": "challenger-shader", "raise": "Uma palavra enorme domina o anúncio contra rótulos minúsculos nas margens, contraste de escala total."},
+        {"from": "challenger-bench", "raise": "Estado é marca, não cor: preço antigo riscado à caneta, o anúncio escolhido circulado em vermelho."},
+        {"from": "challenger-transit", "raise": "O caminho Instagram → página corre como uma rota com paradas numeradas e curvas de 90°."},
+        {"from": "challenger-pattern", "raise": "A opção escolhida em traço cheio; as alternativas tracejadas."},
+        {"from": "challenger-night", "raise": "Um só acento quente marca o prazo: o 24h é o único vermelho fora das marcas de caneta."}
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html",
+      "htmlFrame": "390x844",
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Encarte de Ofertas",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "encartes de supermercado e lojas de bairro",
+      "thesis": "O site como oferta da semana: a página pronta é o produto, com etiqueta DE/POR.",
+      "palette": ["#FFD400", "#E30613", "#FFFFFF", "#111111"],
+      "materials": ["papel couché brilhante", "estouros de preço", "etiquetas recortadas"],
+      "viewport": "Manchete OFERTA em caixa alta, etiqueta gigante R$499,90 sobre o DE 999,90, e as páginas do portfólio como produtos na gôndola.",
+      "risk": "É onde a maioria das páginas de oferta cai; pode parecer barato e esconder a competência.",
+      "html": ".impeccable/mocks/decision/model-pick.html",
+      "htmlFrame": "390x844",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-cereal",
+      "kind": "challenger",
+      "catalogId": "pop-culture-shelf-cereal-box-aisle",
+      "label": "Corredor de Cereais",
+      "verdict": "competitive",
+      "lineage": "gôndola de supermercado com caixas e selos NOVO!",
+      "thesis": "Cada página do portfólio é uma caixa na prateleira; virar a caixa mostra o verso com os detalhes.",
+      "palette": ["#D7261E", "#FFC423", "#FFFFFF", "#1E2A78"],
+      "materials": ["papelão revestido", "selos estourados", "painéis traseiros"],
+      "viewport": "Uma parede de caixas coloridas na altura do olhar, a sua com o selo NOVO! puxada para frente.",
+      "case": "Funde bem: segmentos viram caixas e a oferta vira selo; perde em clareza sobre ser encontrado no Google.",
+      "risk": "Barulhento demais para advogados e clínicas; o portfólio vira brinquedo.",
+      "html": ".impeccable/mocks/decision/challenger-cereal.html",
+      "htmlFrame": "390x844",
+      "comp": ".impeccable/mocks/decision/challenger-cereal.png",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-cereal-box-aisle-hero.webp"
+    },
+    {
+      "id": "challenger-shader", "kind": "challenger", "catalogId": "webgl-shader-portal", "label": "Portal WebGL", "verdict": "declined",
+      "lineage": "portais de estúdios experimentais", "thesis": "Campo de shader em tela cheia com texto fino flutuando.",
+      "palette": ["#0A0F2C", "#FF6B3D"], "materials": ["shader", "granulado de filme"],
+      "viewport": "Uma palavra gigante sobre pixels vivos.", "risk": "Dono de pet shop no celular não se identifica; pesado no 4G.",
+      "case": "Funde mal: perde identificação e clareza.", "kept": "Contraste de escala total no anúncio.",
+      "hero": "https://impeccable.style/worlds/cards/webgl-shader-portal-hero.webp"
+    },
+    {
+      "id": "challenger-bench", "kind": "challenger", "catalogId": "operate-a-cutting-bench-select-rail", "label": "Mesa de Corte", "verdict": "declined",
+      "lineage": "ilha de edição de filme", "thesis": "Trilho perfurado com quadros presos por pinos.",
+      "palette": ["#000000", "#FF7A1A", "#FFFFFF"], "materials": ["película", "fita"],
+      "viewport": "Seções como quadros num trilho.", "risk": "Mundo alheio ao comércio local.",
+      "case": "Funde mal: perde nos dois eixos.", "kept": "Estado como marca, não como cor.",
+      "hero": "https://impeccable.style/worlds/cards/operate-a-cutting-bench-select-rail-hero.webp"
+    },
+    {
+      "id": "challenger-transit", "kind": "challenger", "catalogId": "wayfinding-cartography-signage-midnight-transit-diagram", "label": "Mapa de Metrô", "verdict": "declined",
+      "lineage": "diagramas de transporte", "thesis": "Linhas coloridas em ângulos de 45/90° sobre azul esmaltado.",
+      "palette": ["#0E1A3A", "#E63946", "#F4A261", "#2A9D8F"], "materials": ["esmalte", "porcelana"],
+      "viewport": "Rede de linhas com estações.", "risk": "Metrô não é o mundo do interior.",
+      "case": "Funde mal: perde identificação e clareza.", "kept": "Rota disciplinada com paradas numeradas.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp"
+    },
+    {
+      "id": "challenger-night", "kind": "challenger", "catalogId": "light-shadow-caustics-rain-night-cityscape", "label": "Cidade à Noite", "verdict": "declined",
+      "lineage": "noturno urbano chuvoso", "thesis": "Skyline cobalto com reflexos âmbar.",
+      "palette": ["#13204A", "#F2A541", "#C9D6E3"], "materials": ["chuva", "neon"],
+      "viewport": "Faixas de skyline, rua e reflexo.", "risk": "Atmosfera sem oferta.",
+      "case": "Funde mal: perde nos dois eixos.", "kept": "Um único acento marcando a hora.",
+      "hero": "https://impeccable.style/worlds/cards/light-shadow-caustics-rain-night-cityscape-hero.webp"
+    },
+    {
+      "id": "challenger-pattern", "kind": "challenger", "catalogId": "fashion-folded-worlds-sewing-pattern-envelope", "label": "Molde de Costura", "verdict": "declined",
+      "lineage": "envelopes de molde de costura", "thesis": "Papel de seda com linhas de corte e tamanhos aninhados.",
+      "palette": ["#E8D9B5", "#111111", "#C0392B"], "materials": ["papel de seda", "guache"],
+      "viewport": "Vistas A, B, C na capa do envelope.", "risk": "Delicado demais para a oferta.",
+      "case": "Funde mal: perde identificação e clareza.", "kept": "Escolhido em traço cheio, resto tracejado.",
+      "hero": "https://impeccable.style/worlds/cards/fashion-folded-worlds-sewing-pattern-envelope-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "code", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "O padrão da categoria",
+    "thesis": "A landing page de agência que todo mundo faz, executada com capricho.",
+    "palette": ["#FFFFFF", "#0F172A", "#16A34A"],
+    "materials": ["grid limpo", "mockups de notebook e celular"],
+    "viewport": "Título à esquerda, mockup à direita, fileira de selos de confiança embaixo.",
+    "risk": "Indistinguível da concorrência, de propósito.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "htmlFrame": "390x844",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

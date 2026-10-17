@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estúdio Linho · Arquitetura de interiores (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para escritório de arquitetura de interiores, no estilo caderno de acabamentos. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2E3B2F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--board:#2E3B2F;--board-d:#222C23;--card:#F7F7F4;--ink:#1D221E;--ink-soft:#59615A;--oak:#B98B5A;--walnut:#5B3A24;--sage:#9DAE94;--clay:#C2704F;--stone:#D9D4CB;--brass:#C9A14A;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--oak) var(--board-d)}
+body{background:var(--board);color:var(--card);font-family:"Schibsted Grotesk",system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+::selection{background:var(--brass);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--board-d);color:#DDE3DA;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--brass);font-weight:700}
+/* material board: samples pinned to a dark fabric board */
+.mood{padding:28px 0 10px;display:grid;gap:14px}
+.title{background:var(--card);color:var(--ink);padding:20px 18px 22px;box-shadow:0 16px 26px -16px rgba(0,0,0,.7)}
+.title .nm{font-weight:700;font-size:.95rem;color:var(--ink);margin-top:14px;border-top:2px solid var(--ink);padding-top:8px;max-width:30ch}
+h1{font-weight:900;font-size:clamp(2.5rem,10vw,5rem);line-height:.95;letter-spacing:-.03em;margin:0 0 12px}
+.title .lead{color:var(--ink-soft);max-width:42ch;font-size:1.06rem}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--card);font-weight:700;font-size:1.05rem;padding:13px 22px;text-decoration:none;margin-top:18px;transition:background .2s}
+.btn:hover{background:var(--walnut)}
+.btn svg{width:22px;height:22px}
+.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.s{aspect-ratio:1;position:relative;box-shadow:0 12px 20px -12px rgba(0,0,0,.75);display:flex;align-items:flex-end;padding:6px 8px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
+.s span{background:var(--card);color:var(--ink);padding:1px 6px}
+.s.round{border-radius:50%;align-items:center;justify-content:center;margin:4px}
+.s.tall{grid-row:span 2;aspect-ratio:auto}
+.pin{position:absolute;top:6px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--brass);box-shadow:0 2px 0 rgba(0,0,0,.4)}
+.sec{background:var(--card);color:var(--ink);padding:46px 0;margin-top:30px}
+.sec h2{font-weight:900;font-size:clamp(2rem,6vw,3rem);line-height:1;letter-spacing:-.02em}
+.sec .intro{color:var(--ink-soft);max-width:56ch;margin-top:8px}
+.spec{width:100%;border-collapse:collapse;margin-top:20px}
+.spec th,.spec td{text-align:left;padding:12px 10px;border-bottom:1px solid #D8D6CF;vertical-align:top}
+.spec thead th{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;border-bottom:2px solid var(--ink)}
+.spec td:first-child{width:46px}
+.sw{width:34px;height:34px;display:block}
+.spec b{display:block}
+.spec span{color:var(--ink-soft);font-size:.95rem}
+.steps{list-style:none;display:grid;gap:12px;margin-top:22px}
+.steps li{border-top:2px solid var(--ink);padding-top:10px}
+.steps b{display:block;font-weight:700;font-size:1.15rem}
+.steps span{color:var(--ink-soft)}
+.close{padding:44px 0 50px}
+.close h2{font-weight:900;font-size:clamp(2rem,6vw,3rem);line-height:1;letter-spacing:-.02em}
+.close p{opacity:.9;margin-top:10px;max-width:46ch}
+.close .btn{background:var(--brass);color:var(--ink)}
+.close .btn:hover{background:var(--card)}
+.fine{font-size:.82rem;opacity:.85;margin-top:14px}
+footer{background:var(--board-d);color:#B9C2B6;font-size:.85rem;padding:18px 0 26px}
+footer a{color:var(--brass)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .mood{grid-template-columns:1.1fr 1fr;align-items:center;gap:30px;padding-top:44px}
+  .title{padding:30px 30px 32px}
+  .steps{grid-template-columns:repeat(4,1fr);gap:20px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<div class="wrap mood">
+  <section class="title" aria-labelledby="h1">
+    <h1 id="h1">Cada material escolhido com você.</h1>
+    <p class="lead">Projetos de interiores residenciais com caderno de acabamentos completo: madeira, pedra, tecido e metal definidos antes da obra.</p>
+    <p class="nm">Estúdio Linho, arquitetura de interiores</p>
+    <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar reunião de briefing</a>
+  </section>
+  <div class="samples" aria-label="Painel de acabamentos ilustrativo" role="img">
+    <div class="s tall" style="background:var(--oak)"><i class="pin"></i><span>Carvalho natural</span></div>
+    <div class="s" style="background:var(--sage)"><i class="pin"></i><span>Verde sálvia</span></div>
+    <div class="s round" style="background:var(--brass)"><span>Latão</span></div>
+    <div class="s" style="background:var(--stone)"><i class="pin"></i><span>Travertino</span></div>
+    <div class="s" style="background:var(--clay)"><i class="pin"></i><span>Terracota</span></div>
+    <div class="s" style="background:var(--walnut)"><i class="pin"></i><span>Nogueira</span></div>
+    <div class="s" style="background:#E9E3D6"><i class="pin"></i><span>Linho cru</span></div>
+    <div class="s" style="background:#8E8B84"><i class="pin"></i><span>Cimento queimado</span></div>
+  </div>
+</div>
+<section class="sec" aria-labelledby="cad">
+  <div class="wrap">
+    <h2 id="cad">O caderno de acabamentos</h2>
+    <p class="intro">Você recebe um documento com cada material, fornecedor e local de uso. A obra segue o caderno, sem improviso.</p>
+    <table class="spec">
+      <thead><tr><th scope="col"></th><th scope="col">Material</th><th scope="col">Onde</th></tr></thead>
+      <tbody>
+        <tr><td><i class="sw" style="background:var(--oak)"></i></td><td><b>Lâmina de carvalho</b><span>Marcenaria sob medida</span></td><td>Painel da sala e cozinha</td></tr>
+        <tr><td><i class="sw" style="background:var(--stone)"></i></td><td><b>Travertino levigado</b><span>Pedra natural</span></td><td>Bancada do lavabo</td></tr>
+        <tr><td><i class="sw" style="background:var(--sage)"></i></td><td><b>Tinta acrílica fosca</b><span>Verde sálvia</span></td><td>Quarto principal</td></tr>
+        <tr><td><i class="sw" style="background:var(--brass)"></i></td><td><b>Metais em latão escovado</b><span>Torneiras e puxadores</span></td><td>Cozinha e banheiros</td></tr>
+      </tbody>
+    </table>
+    <ol class="steps">
+      <li><b>Briefing</b><span>Conversa sobre rotina, gostos e orçamento.</span></li>
+      <li><b>Estudo</b><span>Layout e primeiras imagens do projeto.</span></li>
+      <li><b>Executivo</b><span>Detalhamento e caderno de acabamentos.</span></li>
+      <li><b>Obra</b><span>Acompanhamento até a entrega.</span></li>
+    </ol>
+  </div>
+</section>
+<section class="close" aria-labelledby="fin">
+  <div class="wrap">
+    <h2 id="fin">Vamos começar pelo briefing?</h2>
+    <p>Mande a planta ou fotos do imóvel e conte o que você imagina. A primeira reunião pode ser on-line.</p>
+    <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Falar com o estúdio</a>
+    <p class="fine">Escritório e projetos fictícios, criados para demonstração.</p>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo do estúdio de interiores (estilo caderno de acabamentos) e quero uma página assim.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Padaria Trigal · Café da manhã (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para padaria, no estilo corredor de cereais. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7A41D">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#F7A41D;--brown:#5A2E14;--cream:#FFF6E6;--berry:#C2185B;--teal:#00796B;--sky:#4FC3F7;--milk:#fff;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--brown) var(--orange)}
+body{background:var(--teal);color:var(--brown);font-family:Nunito,system-ui,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+::selection{background:var(--orange);color:var(--brown)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--milk);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--brown);color:var(--cream);font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--orange);font-weight:800}
+.t{font-family:"Titan One";font-weight:400;letter-spacing:.005em;line-height:.98}
+.out{color:var(--milk);-webkit-text-stroke:.08em var(--brown);paint-order:stroke fill;text-shadow:0 .07em 0 var(--brown)}
+/* aisle */
+.aisle{padding:26px 0 0}
+.shelf{display:flex;align-items:flex-end;gap:12px;padding:0 4px;overflow:hidden}
+.ledge{height:18px;background:#D8CFC2;border-top:3px solid #B7AC9C}
+.pkg{flex:none;border:3px solid var(--brown);border-radius:6px 6px 0 0;padding:10px;color:var(--milk)}
+.big{flex:1;background:var(--orange);color:var(--brown);border-radius:10px 10px 0 0;padding:20px 18px 22px;position:relative;box-shadow:0 18px 24px -14px rgba(0,0,0,.45)}
+.big h1{font-size:clamp(2.3rem,10.5vw,5.6rem)}
+.big p{font-weight:700;font-size:1.1rem;max-width:30ch;margin:12px 0 18px}
+.flag{position:absolute;right:12px;top:-20px;width:92px;height:92px;display:grid;place-items:center;text-align:center;color:var(--berry);transform:rotate(10deg)}
+.flag svg{position:absolute;inset:0;width:100%;height:100%}
+.flag span{position:relative;font-family:"Titan One";font-size:.95rem;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--berry);color:var(--milk);font-family:"Titan One";font-size:1.15rem;border:3px solid var(--brown);border-radius:999px;padding:12px 22px;text-decoration:none;box-shadow:0 4px 0 var(--brown);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:22px;height:22px}
+.side{background:var(--milk);border:3px solid var(--brown);padding:12px 14px;margin:14px 0 0;font-size:.95rem}
+.side h2{font-family:Nunito;font-weight:800;font-size:1.4rem;border-bottom:7px solid var(--brown);padding-bottom:2px;text-transform:uppercase;letter-spacing:-.01em}
+.side table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.side th,.side td{border-bottom:1px solid var(--brown);padding:5px 0;text-align:left}
+.side td{text-align:right;font-weight:800}
+.peek{width:34px;height:170px;position:relative}
+.peek span{position:absolute;top:10px;left:50%;transform:translateX(-50%) rotate(180deg);writing-mode:vertical-rl;font-family:"Titan One";color:var(--milk);font-size:1rem}
+/* products as boxes */
+.range{background:var(--cream);padding:46px 0 36px}
+.range h2{font-size:clamp(2rem,7vw,3.2rem);color:var(--berry)}
+.range>.wrap>p{margin:8px 0 22px;max-width:46ch;font-weight:700}
+.boxes{list-style:none;display:grid;grid-auto-flow:column;grid-auto-columns:min(70%,240px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 0 0}
+.boxes li{scroll-snap-align:start;border:3px solid var(--brown);border-radius:8px 8px 0 0;padding:14px;min-height:250px;display:flex;flex-direction:column;gap:8px;color:var(--milk)}
+.boxes h3{font-family:"Titan One";font-weight:400;font-size:1.6rem;line-height:1;-webkit-text-stroke:.06em var(--brown);paint-order:stroke fill}
+.boxes p{font-weight:700;font-size:.95rem;color:var(--milk)}
+.boxes .p{margin-top:auto;background:var(--milk);color:var(--brown);font-family:"Titan One";border:2px solid var(--brown);border-radius:999px;padding:2px 12px;align-self:flex-start;font-size:1.1rem}
+.range .ledge{margin-top:0}
+.hours{background:var(--brown);color:var(--cream);padding:40px 0 48px}
+.hours .wrap{display:grid;gap:18px}
+.hours h2{color:var(--orange);font-size:clamp(1.9rem,6vw,2.8rem)}
+.hours dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-weight:700}
+.hours dt{color:var(--orange)}
+.fine{font-size:.82rem;opacity:.85}
+footer{background:#3E1F0D;color:#E9D3BD;font-size:.85rem;padding:18px 0 26px}
+footer a{color:var(--orange)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .peek{width:140px;height:260px}
+  .hero-row{display:grid;grid-template-columns:1fr 300px;gap:0;align-items:end}
+  .side{margin:0 0 0 -3px;transform:perspective(1200px) rotateY(-16deg);transform-origin:left}
+  .boxes{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible}
+  .hours .wrap{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+  <symbol id="burst" viewBox="0 0 200 200"><polygon fill="#FFF6E6" stroke="#5A2E14" stroke-width="6" stroke-linejoin="round" points="100,4 117,36 150,14 152,52 190,48 172,82 198,104 164,122 182,156 144,156 140,194 110,170 86,198 76,160 40,176 46,138 8,128 36,102 10,74 48,66 40,28 76,40"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. Preços ilustrativos. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<section class="aisle" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-row">
+      <div class="shelf">
+        <div class="pkg peek" style="background:var(--berry)" aria-hidden="true"><span>Bolos</span></div>
+        <div class="big">
+          <div class="flag" aria-hidden="true"><svg><use href="#burst"/></svg><span>Saindo<br>às 6h!</span></div>
+          <h1 id="h1" class="t out">Pão quentinho todo dia</h1>
+          <p>Padaria Trigal. Pão francês, bolos caseiros e café da manhã completo. Encomende pelo WhatsApp e passe só pra buscar.</p>
+          <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Encomendar</a>
+        </div>
+      </div>
+      <aside class="side" aria-labelledby="tab">
+        <h2 id="tab">Informação da fornada</h2>
+        <table>
+          <tr><th scope="row">Primeira fornada</th><td>6h</td></tr>
+          <tr><th scope="row">Segunda fornada</th><td>16h</td></tr>
+          <tr><th scope="row">Pão francês (kg)</th><td>R$ 16,90</td></tr>
+          <tr><th scope="row">Encomenda mínima</th><td>nenhuma</td></tr>
+          <tr><th scope="row">Retirada</th><td>sem fila</td></tr>
+        </table>
+      </aside>
+    </div>
+  </div>
+  <div class="ledge" aria-hidden="true"></div>
+</section>
+<section class="range" aria-labelledby="linha">
+  <div class="wrap">
+    <h2 id="linha" class="t">Escolha da prateleira</h2>
+    <p>Tudo feito aqui, no mesmo dia. Peça até as 18h e retire no horário que quiser.</p>
+    <ul class="boxes">
+      <li style="background:var(--berry)"><h3>Bolo de fubá</h3><p>Receita da casa, com goiabada.</p><span class="p">R$ 24</span></li>
+      <li style="background:var(--teal)"><h3>Pão de queijo</h3><p>Congelado pra assar em casa, pacote de 1 kg.</p><span class="p">R$ 38</span></li>
+      <li style="background:#6D4C41"><h3>Café da manhã</h3><p>Cesta para 2 pessoas, entregue até 9h.</p><span class="p">R$ 89</span></li>
+      <li style="background:#3949AB"><h3>Salgados</h3><p>Cento de coxinha, kibe e esfiha para festa.</p><span class="p">R$ 75</span></li>
+    </ul>
+  </div>
+  <div class="wrap"><div class="ledge" aria-hidden="true"></div></div>
+</section>
+<section class="hours" aria-labelledby="hr">
+  <div class="wrap">
+    <div><h2 id="hr" class="t">Passa aqui</h2><p style="margin-top:8px">Rua Sete de Setembro, 88 · Jardim Primavera</p><p class="fine" style="margin-top:8px">Negócio, endereço e preços fictícios, criados para demonstração.</p></div>
+    <div><dl><dt>Seg. a sáb.</dt><dd>6h às 20h</dd><dt>Domingo</dt><dd>6h às 13h</dd></dl><p style="margin-top:18px"><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Encomendar no WhatsApp</a></p></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da padaria (estilo corredor de cereais) e quero uma página assim para o meu negócio.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+</script>
+</body>
+</html>

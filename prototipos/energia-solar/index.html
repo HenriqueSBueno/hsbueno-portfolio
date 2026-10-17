@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sol Forte Energia · Energia solar (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para empresa de energia solar, no estilo conta de luz. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E8EEF0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FFFFFF;--bill:#E8EEF0;--band:#0B6E4F;--band-d:#07523A;--ink:#17201C;--ink-soft:#4C5A54;--sun:#F2A900;--alert:#B42318;--rule:#B9C7C1;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--band) var(--bill)}
+body{background:var(--bill);color:var(--ink);font-family:"IBM Plex Sans Condensed",system-ui,sans-serif;font-size:17px;line-height:1.5;overflow-x:hidden}
+::selection{background:var(--sun);color:var(--ink)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:#E1E8E5;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:var(--sun);font-weight:700}
+.m{font-family:"Roboto Mono",monospace;font-variant-numeric:tabular-nums}
+/* the bill */
+.fatura{background:var(--paper);margin:22px 0;border:1px solid var(--rule);box-shadow:0 20px 34px -22px rgba(0,0,0,.45)}
+.fh{background:var(--band);color:#fff;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.fh b{font-size:1.25rem;font-weight:700}
+.fh span{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.fb{padding:20px 18px 24px;display:grid;gap:20px}
+h1{font-weight:700;font-size:clamp(2.4rem,9vw,4.4rem);line-height:1;letter-spacing:-.01em}
+h1 span{color:var(--band)}
+.lead{color:var(--ink-soft);max-width:44ch;font-size:1.08rem;margin-top:10px}
+.totals{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink)}
+.totals div{padding:12px 14px}
+.totals div+div{border-left:2px solid var(--ink);background:#F0F7F3}
+.totals small{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.totals .m{font-size:clamp(1.6rem,6vw,2.4rem);font-weight:700;line-height:1.1}
+.totals .before .m{color:var(--alert)}
+.totals .after .m{color:var(--band)}
+.hist{border:1px solid var(--rule);padding:12px 14px}
+.hist h2{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:8px}
+.bars{display:flex;align-items:flex-end;gap:5px;height:120px}
+.bars i{flex:1;background:var(--alert);border-radius:2px 2px 0 0;display:block}
+.bars i.s{background:var(--band)}
+.months{display:flex;gap:5px;margin-top:4px}
+.months span{flex:1;text-align:center;font-size:.68rem;color:var(--ink-soft)}
+.cap{font-size:.8rem;color:var(--ink-soft);margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--sun);color:var(--ink);font-weight:700;font-size:1.1rem;padding:14px 22px;text-decoration:none;border:2px solid var(--ink);transition:background .2s;margin-top:18px}
+.btn:hover{background:#FFC233}
+.btn svg{width:22px;height:22px}
+.barcode{border-top:1px dashed var(--rule);padding:14px 18px 18px;display:grid;gap:8px}
+.barcode .m{font-size:.8rem;letter-spacing:.06em;color:var(--ink-soft);word-break:break-all}
+.barcode svg{width:100%;height:44px}
+.sec{padding:30px 0 10px}
+.sec h2{font-weight:700;font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.05}
+.sec>p{color:var(--ink-soft);max-width:56ch;margin-top:8px}
+.items{width:100%;border-collapse:collapse;margin-top:16px;background:var(--paper);border:1px solid var(--rule)}
+.items th,.items td{padding:11px 12px;border-bottom:1px solid var(--rule);text-align:left}
+.items td:last-child{text-align:right;font-family:"Roboto Mono";font-weight:700}
+.items thead th{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);background:#F3F6F5;font-weight:600}
+.items thead th:last-child{text-align:right}
+.close{background:var(--band);color:#fff;margin-top:40px;padding:40px 0 46px}
+.close h2{font-weight:700;font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05}
+.close p{opacity:.92;margin-top:8px;max-width:46ch}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:12px}
+footer{background:var(--ink);color:#B5C2BC;font-size:.85rem;padding:18px 0 26px}
+footer a{color:var(--sun)}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .fb{grid-template-columns:1.1fr 1fr;gap:30px;padding:28px 30px 30px}
+  .barcode{grid-template-columns:1fr 1fr;align-items:center;padding:16px 30px 20px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. Valores ilustrativos. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<div class="wrap">
+  <article class="fatura" aria-labelledby="h1">
+    <div class="fh"><b>Sol Forte Energia</b><span>Simulação de economia</span></div>
+    <div class="fb">
+      <div>
+        <h1 id="h1">Sua conta de luz <span>até 90% menor</span> com energia solar.</h1>
+        <p class="lead">Projeto, instalação e homologação com a distribuidora. Mande uma foto da sua conta e receba a simulação pelo WhatsApp.</p>
+        <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Enviar minha conta de luz</a>
+      </div>
+      <div>
+        <div class="totals">
+          <div class="before"><small>Antes</small><span class="m">R$ 780</span></div>
+          <div class="after"><small>Depois</small><span class="m">R$ 92</span></div>
+        </div>
+        <div class="hist" style="margin-top:12px">
+          <h2>Histórico de consumo (exemplo)</h2>
+          <div class="bars" aria-hidden="true"><i style="height:82%"></i><i style="height:90%"></i><i style="height:100%"></i><i style="height:94%"></i><i style="height:88%"></i><i style="height:85%"></i><i class="s" style="height:14%"></i><i class="s" style="height:12%"></i><i class="s" style="height:13%"></i><i class="s" style="height:11%"></i><i class="s" style="height:12%"></i><i class="s" style="height:12%"></i></div>
+          <div class="months" aria-hidden="true"><span>N</span><span>D</span><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span></div>
+          <p class="cap">Conta residencial ilustrativa, antes e depois da instalação de 6 kWp. A economia real depende do consumo e do telhado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="barcode">
+      <span class="m">SIMULAÇÃO GRATUITA · CÓDIGO DE EXEMPLO 12345.67890 12345.678901</span>
+      <svg viewBox="0 0 300 44" preserveAspectRatio="none" aria-hidden="true"><g fill="#17201C"></g></svg>
+    </div>
+  </article>
+</div>
+<section class="sec" aria-labelledby="inc">
+  <div class="wrap">
+    <h2 id="inc">O que vem no projeto</h2>
+    <p>Tudo incluso, do estudo do telhado até a troca do medidor.</p>
+    <table class="items">
+      <thead><tr><th scope="col">Item</th><th scope="col">Situação</th></tr></thead>
+      <tbody>
+        <tr><td>Visita técnica e estudo do telhado</td><td>incluso</td></tr>
+        <tr><td>Projeto e homologação na distribuidora</td><td>incluso</td></tr>
+        <tr><td>Painéis e inversor com garantia de fábrica</td><td>até 25 anos</td></tr>
+        <tr><td>Instalação com equipe própria</td><td>incluso</td></tr>
+        <tr><td>Monitoramento pelo celular</td><td>incluso</td></tr>
+        <tr><td>Financiamento</td><td>em até 84x</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Empresa, valores, prazos e condições fictícios, criados para demonstração.</p>
+  </div>
+</section>
+<section class="close" aria-labelledby="fin">
+  <div class="wrap">
+    <h2 id="fin">Pague a placa com o que você deixa de pagar de luz.</h2>
+    <p>Mande uma foto da sua conta. Em até 24h você recebe a simulação com o tamanho do sistema e a economia estimada.</p>
+    <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Quero minha simulação</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da energia solar (estilo conta de luz) e quero uma página assim.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+const g=document.querySelector(".barcode g");let x=0;const w=[2,1,3,1,2,2,1,3,1,1,2,3,1,2,1,1,3,2,1,2,2,1,1,3,2,1,2,1,3,1,2,2,1,1,2,3,1,2,1,2,3,1,1,2,1,3,2,1,2,1,1,2,3,1,2,1,2,2,1,3,1,2,1,1,2,3,2,1,2,1,1,3,1,2,2,1,3,1,2,1];
+for(let i=0;i<w.length&&x<300;i++){if(i%2===0){const r=document.createElementNS("http://www.w3.org/2000/svg","rect");r.setAttribute("x",x);r.setAttribute("y",0);r.setAttribute("width",w[i]*1.4);r.setAttribute("height",44);g.appendChild(r)}x+=w[i]*1.4+1}
+</script>
+</body>
+</html>

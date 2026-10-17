@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clínica Sorriso Pleno · Implantes e reabilitação (protótipo)</title>
+<meta name="description" content="Protótipo de landing page para clínica odontológica, no estilo odontograma. Criado por Henrique Bueno.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=Red+Hat+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FFFFFF;--chart:#F3F6FA;--ink:#14213D;--ink-soft:#4B5873;--blue:#1D4ED8;--red:#C81E3A;--rule:#C9D3E3;--gutter:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scrollbar-color:var(--blue) var(--chart)}
+body{background:var(--chart);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:17px;line-height:1.55;overflow-x:hidden}
+::selection{background:var(--blue);color:#fff}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+.proto{background:var(--ink);color:#E3E9F5;font-size:.85rem;text-align:center;padding:8px var(--gutter)}
+.proto a{color:#9DB7FF;font-weight:600}
+.mono{font-family:"Red Hat Mono",monospace}
+.ficha{background:var(--paper);border:1px solid var(--rule);margin:22px 0 0;padding:20px 18px 24px;border-radius:4px}
+.ficha-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px;border-bottom:2px solid var(--ink);padding-bottom:8px;font-size:.85rem}
+.ficha-h b{font-weight:800;font-size:1.05rem}
+h1{font-weight:800;font-size:clamp(2.4rem,9vw,4.6rem);line-height:1.02;letter-spacing:-.025em;margin:22px 0 10px;max-width:15ch}
+h1 em{font-style:normal;color:var(--blue)}
+.lead{color:var(--ink-soft);max-width:48ch;font-size:1.08rem}
+.chart{margin:22px 0 6px;overflow-x:auto}
+.chart svg{display:block;width:100%;height:auto}
+.pf{margin-top:22px;border-top:2px solid var(--ink)}
+.pf div{display:grid;grid-template-columns:96px 1fr;gap:10px;border-bottom:1px solid var(--rule);padding:7px 0}
+.pf dt{font-family:"Red Hat Mono";font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+.pf dd{font-weight:600}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:var(--ink-soft)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;font-weight:800;font-size:1.05rem;padding:14px 22px;border-radius:8px;text-decoration:none;transition:background .2s;margin-top:20px}
+.btn:hover{background:#1638A8}
+.btn svg{width:22px;height:22px}
+.plan{padding:44px 0 10px}
+h2{font-weight:800;font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.05;letter-spacing:-.02em}
+.plan>.wrap>p{color:var(--ink-soft);max-width:56ch;margin-top:8px}
+.tbl{width:100%;border-collapse:collapse;margin-top:18px;background:var(--paper);border:1px solid var(--rule)}
+.tbl th,.tbl td{text-align:left;padding:12px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+.tbl thead th{font-family:"Red Hat Mono";font-weight:500;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);background:var(--chart)}
+.tbl td:first-child{font-family:"Red Hat Mono";color:var(--blue);white-space:nowrap}
+.tbl b{display:block}
+.tbl span{color:var(--ink-soft);font-size:.95rem}
+.team{padding:40px 0 50px;display:grid;gap:16px}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:16px}
+.card b{display:block;font-size:1.1rem}
+.card small{font-family:"Red Hat Mono";color:var(--ink-soft)}
+.card p{color:var(--ink-soft);margin-top:6px;font-size:.95rem}
+.fine{font-size:.82rem;color:var(--ink-soft);margin-top:12px}
+footer{background:var(--ink);color:#B7C2D8;font-size:.85rem;padding:18px 0 26px}
+footer a{color:#9DB7FF}
+@media (min-width:760px){
+  :root{--gutter:28px}
+  .ficha{padding:30px 36px 34px}
+  .top{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:end}
+  .team{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.95-2.25.24-.27.53-.34.71-.34l.51.01c.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.67-.78.85-1.05.18-.27.36-.22.6-.13.25.09 1.56.74 1.83.87.27.13.45.2.51.31.07.11.07.64-.17 1.32Z"/></symbol>
+  <symbol id="t" viewBox="0 0 30 40"><path d="M4 4h22v16c0 8-4 16-6 16s-3-6-5-6-3 6-5 6-6-8-6-16Z" fill="#fff" stroke="#14213D" stroke-width="2"/></symbol>
+</svg>
+<div class="proto">Protótipo fictício criado por Henrique Bueno. <a class="wa" href="#">Quero uma página assim →</a></div>
+<main>
+<div class="wrap">
+  <section class="ficha" aria-labelledby="h1">
+    <div class="ficha-h"><b>Clínica Sorriso Pleno</b><span class="mono">Ficha clínica · avaliação</span></div>
+    <div class="top">
+      <div>
+        <h1 id="h1">Seu sorriso planejado <em>dente por dente</em>.</h1>
+        <p class="lead">Implantes, próteses e reabilitação oral com plano de tratamento por escrito, explicado em cada etapa. Avaliação com tomografia na própria clínica.</p>
+        <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a>
+        <dl class="pf"><div><dt>Paciente</dt><dd>você</dd></div><div><dt>Queixa</dt><dd>falta de um ou mais dentes</dd></div><div><dt>Conduta</dt><dd>avaliação com tomografia</dd></div></dl>
+      </div>
+      <div>
+        <div class="chart">
+          <svg id="odo" viewBox="0 0 560 170" role="img" aria-label="Odontograma ilustrativo com dentes numerados de 18 a 28 e de 48 a 38">
+            <g id="up"></g><g id="lo"></g>
+          </svg>
+        </div>
+        <div class="legend"><span><i style="background:var(--blue)"></i>Planejado</span><span><i style="background:var(--red)"></i>Ausente</span><span><i style="background:#fff;border:1px solid var(--ink)"></i>Saudável</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+<section class="plan" aria-labelledby="pl">
+  <div class="wrap">
+    <h2 id="pl">Como é o plano de tratamento</h2>
+    <p>Na avaliação você recebe o plano completo: o que será feito, em quantas sessões e em quanto tempo. Sem surpresa no meio do caminho.</p>
+    <table class="tbl">
+      <thead><tr><th scope="col">Etapa</th><th scope="col">O que acontece</th></tr></thead>
+      <tbody>
+        <tr><td>01</td><td><b>Avaliação e tomografia</b><span>Exame clínico e imagem 3D para planejar com precisão.</span></td></tr>
+        <tr><td>02</td><td><b>Plano por escrito</b><span>Tratamento, sessões e formas de pagamento combinados antes de começar.</span></td></tr>
+        <tr><td>03</td><td><b>Cirurgia guiada</b><span>Implantes posicionados com guia digital, com anestesia local.</span></td></tr>
+        <tr><td>04</td><td><b>Prótese e acompanhamento</b><span>Coroas definitivas e revisões periódicas.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<div class="wrap team" aria-label="Equipe">
+  <div class="card"><b>Dr. Rafael Nunes</b><small>CRO-SP 00000 · implantodontia</small><p>Responsável técnico da clínica.</p></div>
+  <div class="card"><b>Dra. Camila Reis</b><small>CRO-SP 00000 · prótese</small><p>Reabilitação oral e estética.</p></div>
+  <div class="card"><b>Onde estamos</b><small>Av. Bady Bassitt, 0000</small><p>Seg. a sex. 8h às 19h · Sáb. 8h às 12h</p><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Falar no WhatsApp</a></div>
+  <p class="fine">Clínica, profissionais e números de CRO fictícios, criados para demonstração. Conteúdo informativo, sem promessa de resultado.</p>
+</div>
+</main>
+<footer><div class="wrap">Protótipo fictício · Página criada por <a href="/">Henrique Bueno</a>: landing pages em até 24h, de R$999,90 por R$499,90.</div></footer>
+<script>
+const msg="Olá Henrique! Vi o protótipo da clínica odontológica (estilo odontograma) e quero uma página assim.";
+document.querySelectorAll(".wa").forEach(a=>{a.href="https://wa.me/5519994395599?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener"});
+/* draw the odontogram: 16 upper, 16 lower, some teeth marked */
+const NS="http://www.w3.org/2000/svg";
+const up=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28], lo=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38];
+const planned=new Set([36,46,14]), missing=new Set([36,46]);
+const narrow=window.innerWidth<560;
+if(narrow){document.getElementById("odo").setAttribute("viewBox","0 0 300 330")}
+function row(g,list,y,flip){list.forEach((n,i)=>{let x=12+i*34+(i>7?8:0);let yy=y;
+  if(narrow){x=10+(i%8)*35;yy=y+(i>7?(flip?74:74):0)}
+  const r=document.createElementNS(NS,"rect");r.setAttribute("x",x);r.setAttribute("y",yy);r.setAttribute("width",28);r.setAttribute("height",40);r.setAttribute("rx",flip?"4 4 12 12":"12");
+  r.setAttribute("fill",missing.has(n)?"#C81E3A":planned.has(n)?"#1D4ED8":"#fff");r.setAttribute("stroke","#14213D");r.setAttribute("stroke-width","2");
+  if(missing.has(n)){r.setAttribute("fill","#fff");r.setAttribute("stroke","#C81E3A");r.setAttribute("stroke-dasharray","4 3")}
+  g.appendChild(r);
+  if(planned.has(n)){const c=document.createElementNS(NS,"circle");c.setAttribute("cx",x+14);c.setAttribute("cy",yy+20);c.setAttribute("r",8);c.setAttribute("fill","#1D4ED8");g.appendChild(c)}
+  const t=document.createElementNS(NS,"text");t.setAttribute("x",x+14);t.setAttribute("y",flip?yy+58:yy-8);t.setAttribute("text-anchor","middle");t.setAttribute("font-family","Red Hat Mono, monospace");t.setAttribute("font-size","12");t.setAttribute("fill","#4B5873");t.textContent=n;g.appendChild(t)})}
+if(narrow){row(document.getElementById("up"),up,22,false);row(document.getElementById("lo"),lo,182,true)}else{row(document.getElementById("up"),up,22,false);row(document.getElementById("lo"),lo,96,true)}
+</script>
+</body>
+</html>
