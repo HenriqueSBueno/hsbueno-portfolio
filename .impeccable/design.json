@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T20:55:16+00:00",
+  "title": "Design System: Henrique Bueno · Corredor de Cereais",
+  "extensions": {
+    "colorMeta": {
+      "cereal-red": {
+        "role": "primary",
+        "displayName": "Cereal Red",
+        "canonical": "oklch(55.2% 0.210 28.6)",
+        "tonalRamp": [
+          "#1F0000",
+          "#4B0001",
+          "#7D0002",
+          "#B20005",
+          "#DF3128",
+          "#FF6555",
+          "#FFAB9F",
+          "#FFE9E5"
+        ],
+        "cssVar": "--red"
+      },
+      "cereal-red-deep": {
+        "role": "primary",
+        "displayName": "Cereal Red Deep",
+        "canonical": "oklch(46.9% 0.180 29.1)",
+        "tonalRamp": [
+          "#1F0000",
+          "#4B0000",
+          "#7D0000",
+          "#AC1C14",
+          "#D34638",
+          "#FA6A59",
+          "#FFAB9E",
+          "#FFE9E5"
+        ],
+        "cssVar": "--red-deep"
+      },
+      "sunrise-yellow": {
+        "role": "secondary",
+        "displayName": "Sunrise Yellow",
+        "canonical": "oklch(88.1% 0.181 94.0)",
+        "tonalRamp": [
+          "#100B00",
+          "#2D2300",
+          "#4D3E00",
+          "#705C00",
+          "#957B00",
+          "#BC9C00",
+          "#E8C100",
+          "#FFEEB5"
+        ],
+        "cssVar": "--yellow"
+      },
+      "box-navy": {
+        "role": "tertiary",
+        "displayName": "Box Navy",
+        "canonical": "oklch(31.1% 0.116 262.6)",
+        "tonalRamp": [
+          "#00062B",
+          "#021D5B",
+          "#1C3C7C",
+          "#395B9E",
+          "#577CC2",
+          "#779EE7",
+          "#A5C5FF",
+          "#E6EFFF"
+        ],
+        "cssVar": "--navy"
+      },
+      "navy-ink": {
+        "role": "tertiary",
+        "displayName": "Navy Ink",
+        "canonical": "oklch(25.5% 0.089 263.1)",
+        "tonalRamp": [
+          "#00052D",
+          "#0B204E",
+          "#263E6F",
+          "#425C90",
+          "#617DB3",
+          "#819ED7",
+          "#A6C4FF",
+          "#E6EFFF"
+        ],
+        "cssVar": "--navy-ink"
+      },
+      "whatsapp-green": {
+        "role": "accent",
+        "displayName": "WhatsApp Green",
+        "canonical": "oklch(51.0% 0.136 147.6)",
+        "tonalRamp": [
+          "#001002",
+          "#002D0B",
+          "#004E1A",
+          "#0B712B",
+          "#39924B",
+          "#5DB56C",
+          "#84DC91",
+          "#C8FFCE"
+        ],
+        "cssVar": "--green"
+      },
+      "tangerine": {
+        "role": "accent",
+        "displayName": "Tangerine",
+        "canonical": "oklch(74.7% 0.180 57.4)",
+        "tonalRamp": [
+          "#170700",
+          "#3A1A00",
+          "#623100",
+          "#8D4900",
+          "#BA6300",
+          "#EA7E00",
+          "#FFB073",
+          "#FFEADB"
+        ],
+        "cssVar": "--orange"
+      },
+      "sky-box": {
+        "role": "accent",
+        "displayName": "Sky Box",
+        "canonical": "oklch(81.3% 0.101 244.9)",
+        "tonalRamp": [
+          "#000C1A",
+          "#002641",
+          "#00436D",
+          "#226292",
+          "#4483B5",
+          "#66A5D9",
+          "#8ECBFF",
+          "#E1F1FF"
+        ],
+        "cssVar": "--sky"
+      },
+      "grape-berry": {
+        "role": "accent",
+        "displayName": "Grape Berry",
+        "canonical": "oklch(44.6% 0.175 304.5)",
+        "tonalRamp": [
+          "#130025",
+          "#340057",
+          "#561387",
+          "#753AAB",
+          "#955CCF",
+          "#B77EF5",
+          "#D4B2FF",
+          "#F3EAFF"
+        ],
+        "cssVar": "--berry"
+      },
+      "milk": {
+        "role": "neutral",
+        "displayName": "Milk",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#7D7D7D",
+          "#9E9E9E",
+          "#C4C4C4",
+          "#EEEEEE"
+        ],
+        "cssVar": "--milk"
+      },
+      "aisle": {
+        "role": "neutral",
+        "displayName": "Aisle",
+        "canonical": "oklch(96.0% 0.008 253.9)",
+        "tonalRamp": [
+          "#090B0E",
+          "#212428",
+          "#3D4044",
+          "#5B5E62",
+          "#7A7E82",
+          "#9B9FA3",
+          "#C1C4C9",
+          "#EBEFF4"
+        ],
+        "cssVar": "--aisle"
+      },
+      "aisle-back": {
+        "role": "neutral",
+        "displayName": "Aisle Back",
+        "canonical": "oklch(91.4% 0.014 258.3)",
+        "tonalRamp": [
+          "#080B11",
+          "#20242B",
+          "#3B4047",
+          "#595E66",
+          "#787E86",
+          "#999FA7",
+          "#BFC5CD",
+          "#E9EFF8"
+        ],
+        "cssVar": "--aisle-back"
+      },
+      "shelf": {
+        "role": "neutral",
+        "displayName": "Shelf",
+        "canonical": "oklch(83.7% 0.016 257.2)",
+        "tonalRamp": [
+          "#070B12",
+          "#1F242C",
+          "#3A4048",
+          "#585E67",
+          "#777E87",
+          "#989FA9",
+          "#BEC5CF",
+          "#E8EFF9"
+        ],
+        "cssVar": "--shelf"
+      },
+      "shelf-dark": {
+        "role": "neutral",
+        "displayName": "Shelf Dark",
+        "canonical": "oklch(70.9% 0.025 258.4)",
+        "tonalRamp": [
+          "#050B15",
+          "#1D2430",
+          "#38404D",
+          "#555E6C",
+          "#747E8C",
+          "#959FAE",
+          "#BBC5D4",
+          "#E5EFFF"
+        ],
+        "cssVar": "--shelf-dark"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(21.5% 0.038 273.8)",
+        "tonalRamp": [
+          "#07091B",
+          "#1E2336",
+          "#393E54",
+          "#575C73",
+          "#767C94",
+          "#979DB7",
+          "#BCC3DD",
+          "#E9EEFF"
+        ],
+        "cssVar": "--ink"
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(38.4% 0.054 275.2)",
+        "tonalRamp": [
+          "#060721",
+          "#1D213E",
+          "#373D5C",
+          "#555B7C",
+          "#747B9E",
+          "#949CC0",
+          "#BAC2E8",
+          "#E9EEFF"
+        ],
+        "cssVar": "--ink-soft"
+      },
+      "navy-mist": {
+        "role": "neutral",
+        "displayName": "Navy Mist",
+        "canonical": "oklch(87.0% 0.038 267.3)",
+        "tonalRamp": [
+          "#050A1B",
+          "#1C2337",
+          "#373F54",
+          "#545D74",
+          "#737D95",
+          "#949EB7",
+          "#B9C4DE",
+          "#E7EEFF"
+        ],
+        "note": "Hardcoded in index.html, not declared on :root."
+      },
+      "navy-frost": {
+        "role": "neutral",
+        "displayName": "Navy Frost",
+        "canonical": "oklch(91.9% 0.027 267.5)",
+        "tonalRamp": [
+          "#060B17",
+          "#1E2431",
+          "#393F4F",
+          "#575D6E",
+          "#767D8E",
+          "#979EB0",
+          "#BCC4D6",
+          "#E7EEFF"
+        ],
+        "note": "Hardcoded in index.html, not declared on :root."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; milk with yellow accent words, navy stroke .09em, navy extrusion .07em. Locks at 6rem from 1100px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section heads on coloured grounds (yellow, navy, red), stroked at .065em, balanced wrap."
+      },
+      "headline-plain": {
+        "displayName": "Headline Plain",
+        "purpose": "Section heads on aisle or milk grounds; solid navy, no stroke."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Shelf names, 'why' points, tier labels, step numbers (1.25-2rem)."
+      },
+      "panel-head": {
+        "displayName": "Panel Head",
+        "purpose": "Uppercase nutrition/spec/verso heads on a 7-9px ink bar."
+      },
+      "fact-row": {
+        "displayName": "Fact Row",
+        "purpose": "Ruled tables of checkable facts; labels 500, values 800 right-aligned, tabular numerals."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, 44-62ch."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero lead and section intros (1.1-1.25rem); key nouns 800 with a 4px yellow underline."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chips, nav links, FAQ questions, bylines; condensed 80-85%."
+      },
+      "fine": {
+        "displayName": "Fine",
+        "purpose": "Disclaimers, montage credits, figcaptions; condensed 75-80%."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Action pill labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pill-extrusion",
+        "value": "0 5px 0 #0D2B6A, 0 12px 22px -10px rgba(13,43,106,.55)",
+        "purpose": "Action pills at rest."
+      },
+      {
+        "name": "pill-extrusion-hover",
+        "value": "0 7px 0 #0D2B6A, 0 18px 26px -12px rgba(13,43,106,.6)",
+        "purpose": "Action pill hover, with translateY(-2px)."
+      },
+      {
+        "name": "pill-extrusion-active",
+        "value": "0 1px 0 #0D2B6A",
+        "purpose": "Action pill pressed, with translateY(4px)."
+      },
+      {
+        "name": "small-extrusion",
+        "value": "0 3px 0 #0D2B6A",
+        "purpose": "Small header pill; Navy Ink (#0A1F4D) on shelf-nav buttons on navy."
+      },
+      {
+        "name": "type-extrusion",
+        "value": "text-shadow: 0 .07em 0 #0D2B6A",
+        "purpose": "Cereal display type; .06em on box segment names."
+      },
+      {
+        "name": "starburst-drop",
+        "value": "filter: drop-shadow(0 3px 0 #0D2B6A)",
+        "purpose": "Violators; 6px on the offer price burst, 2px on box badges."
+      },
+      {
+        "name": "fab",
+        "value": "0 4px 0 #0D2B6A, 0 12px 22px -8px rgba(0,0,0,.45)",
+        "purpose": "Floating WhatsApp button."
+      },
+      {
+        "name": "coupon-tail",
+        "value": "0 14px 26px -14px rgba(0,0,0,.45)",
+        "purpose": "Support add-on coupon on the red offer ground."
+      },
+      {
+        "name": "highlight-ring",
+        "value": "0 0 0 3px #FFD400",
+        "purpose": "Eye-level tier label; 6px around the maker portrait."
+      },
+      {
+        "name": "ledge-shade",
+        "value": "inset 0 -6px 0 rgba(0,0,0,.08)",
+        "purpose": "Underside of the hero shelf ledge."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-house",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Every transition and keyframe."
+      },
+      {
+        "name": "press",
+        "value": "transform .25s, box-shadow .25s",
+        "purpose": "Pill and FAB hover/press."
+      },
+      {
+        "name": "box-flip",
+        "value": "transform .7s rotateY(180deg), perspective 1200px",
+        "purpose": "Portfolio box turns to its back panel; removed under reduced motion."
+      },
+      {
+        "name": "hero-pull",
+        "value": "translateY(18px) scale(.97) -> none, .9s, delay .1s",
+        "purpose": "Hero box pulled proud of the shelf on load; no-preference only."
+      },
+      {
+        "name": "violator-stamp",
+        "value": "scale .6 -> 1.08 -> 1 at rotate(9deg), .6s, delay .7s",
+        "purpose": "Hero price starburst stamps on; no-preference only."
+      },
+      {
+        "name": "faq-plus",
+        "value": "rotate(45deg), .3s",
+        "purpose": "FAQ plus turns to a cross when open."
+      },
+      {
+        "name": "fab-step-aside",
+        "value": "opacity 0, translateY(12px), .3s",
+        "purpose": "FAB hides while the hero CTA, the close section or the footer is on screen."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "760px"
+      },
+      {
+        "name": "wide",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Red outlined pill with navy extrusion; every primary action opens WhatsApp.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z\"/></svg>Falar no WhatsApp</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:1.2rem;letter-spacing:.01em;border:3px solid var(--navy,#0D2B6A);border-radius:999px;padding:.8em 1.5em;min-height:54px;text-decoration:none;cursor:pointer;box-shadow:0 5px 0 var(--navy,#0D2B6A),0 12px 22px -10px rgba(13,43,106,.55);transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .25s var(--ease,cubic-bezier(.16,1,.3,1));background:var(--red,#D11F1A);color:var(--milk,#FFFFFF)} .ds-btn-primary:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--navy,#0D2B6A),0 18px 26px -12px rgba(13,43,106,.6)} .ds-btn-primary:active{transform:translateY(4px);box-shadow:0 1px 0 var(--navy,#0D2B6A)} .ds-btn-primary:focus-visible{outline:3px solid var(--navy,#0D2B6A);outline-offset:3px}"
+    },
+    {
+      "name": "Action Pill on Red",
+      "kind": "button",
+      "refersTo": "button-yellow",
+      "description": "The same pill turned yellow when it sits on a red box front or the offer section.",
+      "html": "<div class=\"ds-on-red\"><a class=\"ds-btn-yellow\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z\"/></svg>Pedir orçamento no WhatsApp</a></div>",
+      "css": ".ds-on-red{background:var(--red,#D11F1A);padding:24px} .ds-btn-yellow{display:inline-flex;align-items:center;justify-content:center;gap:.6em;font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:1.2rem;letter-spacing:.01em;border:3px solid var(--navy,#0D2B6A);border-radius:999px;padding:.8em 1.5em;min-height:54px;text-decoration:none;cursor:pointer;box-shadow:0 5px 0 var(--navy,#0D2B6A),0 12px 22px -10px rgba(13,43,106,.55);transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1)),box-shadow .25s var(--ease,cubic-bezier(.16,1,.3,1));background:var(--yellow,#FFD400);color:var(--navy,#0D2B6A)} .ds-btn-yellow:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--navy,#0D2B6A),0 18px 26px -12px rgba(13,43,106,.6)} .ds-btn-yellow:active{transform:translateY(4px);box-shadow:0 1px 0 var(--navy,#0D2B6A)} .ds-btn-yellow:focus-visible{outline:3px solid var(--yellow,#FFD400);outline-offset:3px}"
+    },
+    {
+      "name": "Box Chips",
+      "kind": "chip",
+      "refersTo": "chip-live",
+      "description": "Flip chip and live-page chip at the foot of every portfolio box.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip-flip\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 9a8 8 0 0 1 14-3l2 2M20 4v4h-4M20 15a8 8 0 0 1-14 3l-2-2M4 20v-4h4\"/></svg>Virar a caixa</button><a class=\"ds-chip-live\" href=\"#\">Ver página</a></div>",
+      "css": ".ds-chips{display:flex;gap:8px;align-items:center} .ds-chip-flip,.ds-chip-live{font-family:var(--text,'Archivo',system-ui,sans-serif);font-weight:700;font-stretch:80%;font-size:.88rem;color:var(--navy,#0D2B6A);border:2px solid var(--navy,#0D2B6A);border-radius:999px;padding:6px 12px;min-height:40px;display:inline-flex;gap:6px;align-items:center;text-decoration:none;cursor:pointer} .ds-chip-flip{background:var(--milk,#FFFFFF)} .ds-chip-live{background:var(--yellow,#FFD400);font-weight:800} .ds-chip-flip:focus-visible,.ds-chip-live:focus-visible{outline:3px solid var(--navy,#0D2B6A);outline-offset:3px}"
+    },
+    {
+      "name": "Box Face",
+      "kind": "card",
+      "refersTo": "box-face-front",
+      "description": "Portfolio card as a cereal box: segment fill, stroked segment name, starburst badge, screenshot window, chips; open bottom resting on a ledge.",
+      "html": "<article class=\"ds-box\"><span class=\"ds-box-badge\"><svg viewBox=\"0 0 200 200\" aria-hidden=\"true\"><polygon fill=\"#FFD400\" stroke=\"#0D2B6A\" stroke-width=\"6\" stroke-linejoin=\"round\" points=\"100,4 117,36 150,14 152,52 190,48 172,82 198,104 164,122 182,156 144,156 140,194 110,170 86,198 76,160 40,176 46,138 8,128 36,102 10,74 48,66 40,28 76,40\"/></svg><span>DEMO</span></span><span class=\"ds-box-seg\">Pet shop</span><div class=\"ds-box-win\"></div><div><button class=\"ds-chip\" type=\"button\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4 9a8 8 0 0 1 14-3l2 2M20 4v4h-4M20 15a8 8 0 0 1-14 3l-2-2M4 20v-4h4\"/></svg>Virar a caixa</button></div></article><div class=\"ds-box-ledge\"></div>",
+      "css": ".ds-box{position:relative;width:262px;min-height:440px;margin-top:20px;background:var(--orange,#FF8A00);border:3px solid var(--navy-ink,#0A1F4D);border-bottom:0;border-radius:8px 8px 0 0;padding:14px 12px;display:flex;flex-direction:column;gap:10px} .ds-box-ledge{width:300px;height:22px;background:var(--shelf,#C3CAD4);border-top:3px solid var(--shelf-dark,#98A2B1)} .ds-box-seg{font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:1.65rem;line-height:1;color:var(--milk,#FFFFFF);-webkit-text-stroke:.08em var(--navy,#0D2B6A);paint-order:stroke fill;text-shadow:0 .06em 0 var(--navy,#0D2B6A);padding-right:62px} .ds-box-badge{position:absolute;right:-10px;top:-16px;width:76px;height:76px;display:grid;place-items:center;transform:rotate(10deg)} .ds-box-badge svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 2px 0 var(--navy,#0D2B6A))} .ds-box-badge span{position:relative;font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:.8rem;color:var(--navy,#0D2B6A)} .ds-box-win{flex:1;border:3px solid var(--navy,#0D2B6A);border-radius:10px;background:var(--milk,#FFFFFF)} .ds-chip{font-family:var(--text,'Archivo',system-ui,sans-serif);font-weight:700;font-stretch:80%;font-size:.88rem;background:var(--milk,#FFFFFF);color:var(--navy,#0D2B6A);border:2px solid var(--navy,#0D2B6A);border-radius:999px;padding:6px 12px;min-height:40px;display:inline-flex;gap:6px;align-items:center;cursor:pointer} .ds-chip:focus-visible{outline:3px solid var(--navy,#0D2B6A);outline-offset:3px}"
+    },
+    {
+      "name": "Nutrition Panel",
+      "kind": "custom",
+      "refersTo": "nutrition-panel",
+      "description": "Milk side panel listing the offer as nutrition facts in condensed Archivo with heavy rule bars.",
+      "html": "<aside class=\"ds-facts\"><h3>Informação da oferta</h3><p class=\"ds-facts-serv\">Porção: 1 landing page completa</p><table><tr><th>Prazo de entrega</th><td>até 24h</td></tr><tr><th>Domínio</th><td>grátis</td></tr><tr class=\"ds-big\"><th>Preço</th><td><s>R$999,90</s>R$499,90</td></tr></table><p class=\"ds-facts-fine\">Pagamento único pela página.</p></aside>",
+      "css": ".ds-facts{background:var(--milk,#FFFFFF);color:var(--ink,#14182B);border:4px solid var(--navy,#0D2B6A);padding:14px 16px 16px;max-width:330px;font-family:var(--text,'Archivo',system-ui,sans-serif)} .ds-facts h3{font-weight:800;font-stretch:62%;font-size:2.1rem;line-height:1;text-transform:uppercase;letter-spacing:-.01em;border-bottom:9px solid var(--ink,#14182B);padding-bottom:4px} .ds-facts-serv{font-stretch:75%;font-size:.95rem;border-bottom:4px solid var(--ink,#14182B);padding:6px 0} .ds-facts table{width:100%;border-collapse:collapse;font-stretch:80%;font-variant-numeric:tabular-nums} .ds-facts th,.ds-facts td{padding:7px 0;border-bottom:1px solid var(--ink,#14182B);text-align:left;font-size:.98rem} .ds-facts th{font-weight:500} .ds-facts td{text-align:right;font-weight:800} .ds-facts tr.ds-big th,.ds-facts tr.ds-big td{font-size:1.35rem;font-weight:800;border-bottom:9px solid var(--ink,#14182B)} .ds-facts s{font-weight:600;color:var(--ink-soft,#3B4160);text-decoration-color:var(--red,#D11F1A);text-decoration-thickness:3px;margin-right:.35em} .ds-facts-fine{font-size:.78rem;font-stretch:75%;color:var(--ink-soft,#3B4160);margin-top:8px}"
+    },
+    {
+      "name": "Starburst Violator",
+      "kind": "custom",
+      "refersTo": "starburst-violator",
+      "description": "Yellow 22-point price burst with navy stroke and straight-down drop, rotated 9 degrees; carries DE/POR prices.",
+      "html": "<div class=\"ds-burst\"><svg viewBox=\"0 0 200 200\" aria-hidden=\"true\"><polygon fill=\"#FFD400\" stroke=\"#0D2B6A\" stroke-width=\"6\" stroke-linejoin=\"round\" points=\"100,4 117,36 150,14 152,52 190,48 172,82 198,104 164,122 182,156 144,156 140,194 110,170 86,198 76,160 40,176 46,138 8,128 36,102 10,74 48,66 40,28 76,40\"/></svg><span><s>R$999,90</s>por<b>499,90</b></span></div>",
+      "css": ".ds-burst{position:relative;width:176px;height:176px;display:grid;place-items:center;text-align:center;transform:rotate(9deg)} .ds-burst svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 3px 0 var(--navy,#0D2B6A))} .ds-burst span{position:relative;font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:.95rem;line-height:1;color:var(--navy,#0D2B6A)} .ds-burst s{display:block;font-family:var(--text,'Archivo',system-ui,sans-serif);font-weight:800;font-size:1.1rem;text-decoration-color:var(--red,#D11F1A);text-decoration-thickness:1.5px} .ds-burst b{display:block;font-weight:400;font-size:2rem;color:var(--red,#D11F1A)}"
+    },
+    {
+      "name": "Navigation Strip",
+      "kind": "nav",
+      "refersTo": "nav-strip",
+      "description": "Sticky 60px navy strip: yellow wordmark, condensed links, small red action pill.",
+      "html": "<header class=\"ds-strip\"><a class=\"ds-brand\" href=\"#\">Henrique Bueno<small>Landing pages em até 24h</small></a><nav><a href=\"#\">Como funciona</a><a href=\"#\">Páginas</a><a href=\"#\">Oferta</a></nav><a class=\"ds-btn-small\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z\"/></svg>Orçamento</a></header>",
+      "css": ".ds-strip{background:var(--navy,#0D2B6A);height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 16px} .ds-brand{font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:1.35rem;color:var(--yellow,#FFD400);text-decoration:none;line-height:1} .ds-brand small{display:block;font-family:var(--text,'Archivo',system-ui,sans-serif);font-stretch:75%;font-weight:600;font-size:.72rem;color:#C9D4EE;letter-spacing:.04em} .ds-strip nav{display:flex;gap:22px;font-family:var(--text,'Archivo',system-ui,sans-serif);font-weight:600;font-stretch:85%} .ds-strip nav a{color:#DCE4F7;text-decoration:none} .ds-strip nav a:hover{color:var(--yellow,#FFD400)} .ds-strip a:focus-visible{outline:3px solid var(--yellow,#FFD400);outline-offset:3px;border-radius:6px} .ds-btn-small{display:inline-flex;align-items:center;gap:.6em;font-family:var(--display,'Lilita One',system-ui,sans-serif);font-size:.95rem;color:var(--milk,#FFFFFF);background:var(--red,#D11F1A);border:3px solid var(--navy,#0D2B6A);border-radius:999px;padding:.45em 1em;min-height:42px;text-decoration:none;box-shadow:0 3px 0 var(--navy-ink,#0A1F4D);transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1))} .ds-btn-small:hover{transform:translateY(-2px)}"
+    },
+    {
+      "name": "Shelf Nav Button",
+      "kind": "button",
+      "refersTo": "shelf-nav-button",
+      "description": "46px yellow round control that scrolls a portfolio shelf two boxes at a time (desktop).",
+      "html": "<div class=\"ds-shelfnav\"><button class=\"ds-shelf-btn ds-prev\" type=\"button\" aria-label=\"Voltar\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9 5 7 7-7 7\"/></svg></button><button class=\"ds-shelf-btn\" type=\"button\" aria-label=\"Avançar\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"m9 5 7 7-7 7\"/></svg></button></div>",
+      "css": ".ds-shelfnav{display:flex;gap:8px;background:var(--navy,#0D2B6A);padding:16px} .ds-shelf-btn{width:46px;height:46px;border-radius:50%;border:3px solid var(--navy-ink,#0A1F4D);background:var(--yellow,#FFD400);color:var(--navy,#0D2B6A);cursor:pointer;display:grid;place-items:center;box-shadow:0 3px 0 var(--navy-ink,#0A1F4D)} .ds-shelf-btn:hover{background:var(--milk,#FFFFFF)} .ds-shelf-btn:focus-visible{outline:3px solid var(--yellow,#FFD400);outline-offset:3px} .ds-prev svg{transform:rotate(180deg)}"
+    },
+    {
+      "name": "Floating WhatsApp Button",
+      "kind": "button",
+      "refersTo": "fab-whatsapp",
+      "description": "58px green circle with navy keyline and extrusion; steps aside while a full-width CTA is visible.",
+      "html": "<a class=\"ds-fab\" href=\"#\" aria-label=\"Falar no WhatsApp\"><svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z\"/></svg></a>",
+      "css": ".ds-fab{width:58px;height:58px;border-radius:50%;background:var(--green,#1B7A34);color:var(--milk,#FFFFFF);border:3px solid var(--navy,#0D2B6A);display:grid;place-items:center;box-shadow:0 4px 0 var(--navy,#0D2B6A),0 12px 22px -8px rgba(0,0,0,.45);transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1)),opacity .3s} .ds-fab:hover{transform:translateY(-2px)} .ds-fab:focus-visible{outline:3px solid var(--navy,#0D2B6A);outline-offset:3px}"
+    },
+    {
+      "name": "Shelf Ledge with Price Tag",
+      "kind": "custom",
+      "refersTo": "shelf-tag",
+      "description": "Grey shelf ledge every row of boxes rests on, with a yellow unit-price tag clipped to it.",
+      "html": "<div class=\"ds-ledge\"><span class=\"ds-tag\">R$ 499,90 · un.</span></div>",
+      "css": ".ds-ledge{position:relative;height:22px;background:var(--shelf,#C3CAD4);border-top:3px solid var(--shelf-dark,#98A2B1);box-shadow:inset 0 -6px 0 rgba(0,0,0,.08);margin-top:24px} .ds-tag{position:absolute;left:16px;top:-3px;background:var(--yellow,#FFD400);color:var(--navy,#0D2B6A);border:2px solid var(--navy,#0D2B6A);font-family:var(--text,'Archivo',system-ui,sans-serif);font-weight:800;font-stretch:80%;font-size:.8rem;padding:1px 8px;border-radius:3px;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Corredor de Cereais",
+    "overview": "The page is a supermarket cereal aisle under cool fluorescent light, and Henrique's offer is the box pulled proud of the shelf. Every surface is a piece of printed packaging or store fixture: coated-board box fronts in flat saturated ink, a milk-white nutrition panel on the side of the box, grey steel shelf ledges, starburst price violators, a back-of-box activity maze. The metaphor does the selling: the box at eye level sells more, and Google ranks the same way.\n\nThe density is retail, not editorial. Objects are outlined in heavy navy keylines, sit flush on shelf ledges with open bottoms, and carry their information in two voices: a fat rounded cereal logotype for anything that shouts, and a condensed nutrition-table grotesque for anything that has to be checked (prices, deadlines, credentials). Depth comes from print extrusion (straight-down navy offsets) and from the shelf itself, not from floating cards.\n\nThe confirmed rejections are the dark-SaaS hero with a glowing green CTA, the generic grid of icon + heading + text cards, and a warm cream ground (the build moved to a cool aisle grey after the cream read as an AI default).\n\nScope: this system governs `index.html`. The twelve pages under `prototipos/` are separate fictitious demo surfaces, each with its own one-off world; they neither inherit nor contribute tokens. Their screenshots appear here only as product shots inside box windows, and their per-segment box colours are open-slot fills, not system colours.",
+    "keyCharacteristics": [
+      "Flat coated-board fills (red, yellow, navy, milk) on a cool aisle ground; no gradients except lighting on a turned box face.",
+      "Navy keylines (2–4px) around every object that sits on a shelf.",
+      "Lilita One logotype with navy stroke and straight-down navy extrusion.",
+      "Archivo at narrow widths (62–85%) with heavy rule bars for every factual table.",
+      "Boxes are rounded at the top only and rest on grey shelf ledges.",
+      "Starburst violators carry price and status (DE/POR, NOVO!, DEMO, NO AR).",
+      "One action: every primary pill leads to WhatsApp."
+    ],
+    "rules": [
+      {
+        "name": "The Coated Board Rule",
+        "body": "Every section ground is one flat ink from the box: red, yellow, navy, milk or aisle. No tints, no section gradients, no textures. The only gradient in the system is lighting on the turned side panel (#E9EDF3 to milk).",
+        "section": "colors"
+      },
+      {
+        "name": "The Navy Keyline Rule",
+        "body": "Anything that stands on a shelf or can be pressed wears a navy outline (3–4px on boxes and pills, 2px on chips and tags). On a navy ground the keyline drops to Navy Ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Aisle Light Rule",
+        "body": "The store is lit by fluorescent tubes: grounds stay cool grey-blue (#EEF2F7, #DDE3EC). Warm cream is out.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cereal Stroke Rule",
+        "body": "Display type on a coloured ground is milk or yellow with a navy stroke painted behind the fill (`paint-order: stroke fill`) and a straight-down navy extrusion. On a light ground the same face goes solid navy without stroke or extrusion.",
+        "section": "typography"
+      },
+      {
+        "name": "The Nutrition Label Rule",
+        "body": "Any checkable claim (price, deadline, domain, credentials, segment details) is set in condensed Archivo in a ruled table: heavy bar under the head, 1px rows, values right-aligned at 800 with tabular numerals, old prices struck through in red.",
+        "section": "typography"
+      },
+      {
+        "name": "The Shelf Edge Rule",
+        "body": "Products rest on a grey ledge (#C3CAD4 face, 3px #98A2B1 top). A row of boxes or goods ends on a ledge, never on empty space.",
+        "section": "layout"
+      },
+      {
+        "name": "The Straight-Down Extrusion Rule",
+        "body": "Offsets are vertical only and always in the keyline colour (navy, or Navy Ink on navy). They belong to outlined objects (display type, pills, starbursts, the floating button). Never diagonal, never on panels, box faces or sections.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Open Bottom Rule",
+        "body": "A box that stands on a shelf drops its bottom border and its bottom radius; only free-standing objects (pills, coupon, phone, chips) are rounded all round.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** set every section ground in one flat box ink (#D11F1A, #FFD400, #0D2B6A, #FFFFFF, #EEF2F7).",
+      "**Do** outline every shelf object and pressable in navy (3–4px boxes and pills, 2px chips) and stand boxes on a grey ledge with an open bottom.",
+      "**Do** set cereal headlines in Lilita One with navy stroke and a straight-down navy extrusion on coloured grounds, and solid navy without stroke on light grounds.",
+      "**Do** put every checkable fact (price, deadline, credentials, page status) in a condensed Archivo nutrition table with heavy rule bars and tabular numerals.",
+      "**Do** mark every portfolio box with its starburst status (NOVO!, DEMO, NO AR) so demonstrations never read as client work.",
+      "**Do** use the house ease `cubic-bezier(.16,1,.3,1)` and honour `prefers-reduced-motion` (no pull-in, no stamp, no flip transition).",
+      "**Do** keep action pills at 54px and chips at 40px minimum height."
+    ],
+    "donts": [
+      "**Don't** build a dark-SaaS hero with a glowing green CTA; green is the WhatsApp/live signal, flat and outlined.",
+      "**Don't** lay out icon + heading + text card grids; points stand on a navy top rule, products stand on shelves.",
+      "**Don't** use a warm cream ground; the aisle is cool fluorescent grey-blue.",
+      "**Don't** cast diagonal or blurred-only shadows on panels, box faces or sections; extrusions go straight down in the keyline colour.",
+      "**Don't** use gradients for decoration; the only gradient lights the turned side of the box.",
+      "**Don't** add kickers or eyebrow labels above headings; the shelf name, sticker or violator carries that job.",
+      "**Don't** pull the prototypes' own fonts, colours or layouts into this system."
+    ]
+  }
+}

@@ -176,8 +176,8 @@ h2.cereal{font-size:clamp(2.1rem,6vw,3.6rem);text-wrap:balance;-webkit-text-stro
 .burst-b{position:absolute;right:-10px;top:-16px;width:76px;height:76px;display:grid;place-items:center;text-align:center;transform:rotate(10deg);z-index:2}
 .burst-b svg{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 2px 0 var(--navy))}
 .burst-b span{position:relative;width:100%;text-align:center;font-family:var(--display);font-size:.8rem;line-height:1;color:var(--navy)}
-.burst-b.live{--bf:var(--green)}
-.burst-b.live span{color:var(--milk)}
+.burst-b.is-live{--bf:var(--green)}
+.burst-b.is-live span{color:var(--milk)}
 .win{border:3px solid var(--navy);border-radius:10px;overflow:hidden;background:var(--milk);flex:1}
 .win img{width:100%;height:100%;object-fit:cover;object-position:left top;aspect-ratio:585/645}
 .face .acts{display:flex;gap:8px;align-items:center;justify-content:space-between}
@@ -608,7 +608,7 @@ const card = p => {
 <li>
   <div class="pack" id="pk-${p.id}">
     <article class="face front-f" style="--c:${p.c}" aria-label="${esc(p.seg)}: ${esc(p.name)}">
-      <span class="burst-b${p.live ? " live" : ""}"><svg aria-hidden="true"><use href="#burst"/></svg><span>${tag}</span></span>
+      <span class="burst-b${p.live ? " is-live" : ""}"><svg aria-hidden="true"><use href="#burst"/></svg><span>${tag}</span></span>
       <span class="seg${p.dark ? " dark" : ""}">${esc(p.seg)}</span>
       <div class="win"><img src="${p.img}" alt="Primeira tela da página ${esc(p.name)}" loading="lazy" width="585" height="645"></div>
       <div class="acts">
