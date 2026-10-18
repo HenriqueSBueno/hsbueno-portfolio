@@ -24,7 +24,7 @@ Built personally by Henrique Bueno, a performance-marketing and data analyst (6+
 
 ## Capabilities and Constraints
 
-- Offer: landing page de R$999,90 por R$499,90 (pagamento único) + domínio grátis; pronta em até 1 dia.
+- Offer: landing page de R$999,90 por R$499,90 (pagamento único) + domínio grátis no primeiro ano (renovação anual por conta do cliente); pronta em até 1 dia.
 - Add-on: 1 ano de suporte de R$99,90 por R$49,90 mensais.
 - Contact: WhatsApp (19) 99439-5599 → `https://wa.me/5519994395599`.
 - LinkedIn: https://www.linkedin.com/in/hsbueno/
@@ -51,3 +51,10 @@ Built personally by Henrique Bueno, a performance-marketing and data analyst (6+
 2. One action: everything leads to WhatsApp.
 3. Show the work: real pages beat adjectives.
 4. Speak to a layperson on a phone.
+
+## Decisions (2026-10-18)
+
+- Domain: always qualified as "grátis no primeiro ano" wherever the offer is itemised (table, offer list, fine print, FAQ); short meta/headline copy may say "domínio grátis".
+- "Trabalhos realizados" kept as the user's label; the shelf intro states only Marmoraria Atenas is live, cards keep DEMO / NO AR markers and the FAQ explains the difference.
+- No generated photos (gpt-image-2) for prototypes: each prototype carries its world through type, colour and drawn objects, which avoids the generic AI-photo look and extra cost.
+- Straight-down navy extrusion stays as a house rule of the cereal-box world (documented in DESIGN.md).
