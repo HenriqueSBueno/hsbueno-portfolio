@@ -7,8 +7,20 @@
 <meta name="description" content="Landing page profissional pronta em até 24h. De R$999,90 por R$499,90 + domínio grátis. Transformo seu Instagram numa página que leva cliente pro seu WhatsApp.">
 <meta property="og:title" content="Seu site pronto em 1 dia, por R$499,90">
 <meta property="og:description" content="Do Instagram para uma página que vende. Domínio grátis. Orçamento no WhatsApp (19) 99439-5599.">
-<meta property="og:image" content="/img/rabito.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hsbueno-portfolio.vercel.app/">
+<meta property="og:image" content="https://hsbueno-portfolio.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://hsbueno-portfolio.vercel.app/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0D2B6A">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Lilita+One&display=swap" rel="stylesheet">
@@ -356,7 +368,7 @@ footer a{color:#DCE4F7}
             <tr class="big"><th scope="row">Preço</th><td><s>R$999,90</s>R$499,90</td></tr>
             <tr><th scope="row">Suporte (opcional)</th><td><s>R$99,90</s>R$49,90/mês</td></tr>
           </table>
-          <p class="fine">Pagamento único pela página. Domínio grátis no primeiro ano.</p>
+          <p class="fine">Pagamento único pela página, no Pix ou parcelado no cartão. Domínio grátis no primeiro ano.</p>
         </aside>
       </div>
       <div class="peek r" aria-hidden="true"><span>Pet shop</span></div>
@@ -511,13 +523,14 @@ footer a{color:#DCE4F7}
     </div>
     <div>
       <h2 id="oferta-h" class="cereal">Condição especial</h2>
-      <p class="vh">De R$999,90 por R$499,90, pagamento único.</p>
+      <p class="vh">De R$999,90 por R$499,90, pagamento único no Pix ou parcelado no cartão.</p>
       <ul>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Landing page profissional, feita para vender</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Domínio grátis no 1º ano (seunegocio.com.br)</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pronta em até 24 horas</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Botão direto para o seu WhatsApp</li>
         <li><svg aria-hidden="true"><use href="#i-check"/></svg>Preparada para o Google e para o celular</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pague no Pix ou parcele no cartão</li>
       </ul>
       <a class="btn yellow wa" href="#"><svg aria-hidden="true"><use href="#i-wa"/></svg>Quero minha página</a>
       <div class="prize">
@@ -533,7 +546,8 @@ footer a{color:#DCE4F7}
     <h2 id="faq-h" class="h-navy">Letras miúdas (que são boas notícias)</h2>
     <details><summary>Fica pronto mesmo em 1 dia?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Sim. Com o seu Instagram ou suas informações em mãos, a página fica no ar em até 24 horas.</p></details>
     <details><summary>Preciso entender de tecnologia?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Não. Você conversa comigo pelo WhatsApp e eu cuido de tudo: domínio, hospedagem e publicação.</p></details>
-    <details><summary>O domínio é grátis mesmo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Sim. O primeiro ano do domínio está incluído nesta condição.</p></details>
+    <details><summary>O domínio é grátis mesmo?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Sim. O primeiro ano do domínio está incluído nesta condição. A partir do segundo ano, a renovação do domínio fica por conta do dono do negócio.</p></details>
+    <details><summary>Como posso pagar?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>No Pix ou no cartão de crédito, com parcelamento. A gente acerta os detalhes pelo WhatsApp.</p></details>
     <details><summary>E se eu quiser mudar algo depois?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Com o suporte de R$49,90 por mês, eu faço as alterações para você durante 1 ano.</p></details>
     <details><summary>Qual a diferença entre protótipos e trabalhos realizados?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Os protótipos são negócios fictícios, criados para mostrar estilos diferentes. Os trabalhos realizados foram feitos para negócios reais: a Marmoraria Atenas está no ar, e os outros são demonstrações apresentadas a cada negócio antes de qualquer contrato.</p></details>
   </div>
@@ -565,6 +579,7 @@ const D = "Olá Henrique! Vi sua página e quero um orçamento da landing page d
 document.querySelectorAll(".wa").forEach(a => {
   a.href = "https://wa.me/" + N + "?text=" + encodeURIComponent(a.dataset.msg || D);
   a.target = "_blank"; a.rel = "noopener";
+  a.addEventListener("click", () => window.va("event", {name: "whatsapp_click", data: {from: a.closest("section,header,footer")?.id || a.className}}));
 });
 
 const NEW = [

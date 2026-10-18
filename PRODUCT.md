@@ -24,7 +24,8 @@ Built personally by Henrique Bueno, a performance-marketing and data analyst (6+
 
 ## Capabilities and Constraints
 
-- Offer: landing page de R$999,90 por R$499,90 (pagamento único) + domínio grátis no primeiro ano (renovação anual por conta do cliente); pronta em até 1 dia.
+- Offer: landing page de R$999,90 por R$499,90 (pagamento único) + domínio grátis no primeiro ano (from the second year the domain renewal is the business owner's responsibility); pronta em até 1 dia.
+- Payment: Pix or credit card with installments (number of installments agreed on WhatsApp).
 - Add-on: 1 ano de suporte de R$99,90 por R$49,90 mensais.
 - Contact: WhatsApp (19) 99439-5599 → `https://wa.me/5519994395599`.
 - LinkedIn: https://www.linkedin.com/in/hsbueno/
