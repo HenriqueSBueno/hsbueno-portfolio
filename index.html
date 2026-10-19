@@ -105,6 +105,24 @@ h2.cereal{font-size:clamp(2.1rem,6vw,3.6rem);text-wrap:balance;-webkit-text-stro
 .shelf-edge{height:22px;background:var(--shelf);border-top:3px solid var(--shelf-dark);box-shadow:inset 0 -6px 0 rgba(0,0,0,.08);position:relative}
 .shelf-edge .tag{position:absolute;left:var(--gutter);top:-3px;background:var(--yellow);color:var(--navy);border:2px solid var(--navy);font-weight:800;font-stretch:80%;font-size:.8rem;padding:1px 8px;border-radius:3px;font-variant-numeric:tabular-nums}
 
+/* CASE: local demand validation */
+.case{background:var(--navy);color:var(--milk);padding:80px 0;scroll-margin-top:60px}
+.case .eyebrow{color:var(--yellow);font-weight:800;font-stretch:80%;font-size:.88rem;margin-bottom:16px}
+.case h2{max-width:24ch}
+.case .sub{font-size:1.1rem;color:#C9D4EE;max-width:68ch;margin-top:20px}
+.case-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;margin-top:32px;border-top:9px solid var(--yellow);border-bottom:4px solid var(--yellow);padding:20px 0}
+.case-stats div{min-width:0}
+.case-stats dt{font-weight:800;font-stretch:80%;font-size:clamp(2.4rem,7vw,4rem);line-height:1.1;color:var(--yellow);font-variant-numeric:tabular-nums}
+.case-stats dd{font-size:.98rem;font-stretch:80%;margin-top:8px;max-width:22ch}
+.case-metrics{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px;list-style:none;color:#C9D4EE;font-size:.92rem;font-variant-numeric:tabular-nums}
+.case-metrics{flex-direction:column}
+@media (min-width:720px){.case-metrics{flex-direction:row}.case-metrics li+li::before{content:"·";margin-right:12px;color:var(--yellow)}}
+.case .discovery{max-width:72ch;margin-top:28px}
+.case .rigor{font-size:.82rem;color:#C9D4EE;max-width:85ch;margin-top:16px}
+.case-actions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:28px}
+.case-actions .btn{font-size:1.1rem;max-width:100%;box-shadow:0 5px 0 var(--navy-ink)}
+.case-actions .wa{color:var(--yellow);font-weight:700;min-height:44px;display:inline-flex;align-items:center}
+
 /* BACK PANEL: Instagram → página */
 .back{background:var(--yellow);padding:80px 0 72px}
 .back .intro{max-width:640px}
@@ -290,6 +308,7 @@ footer a{color:#DCE4F7}
   .violator b{font-size:2rem}
   .side{border-left:0;border-radius:0 10px 0 0;transform:perspective(1600px) rotateY(13deg);transform-origin:0 100%;align-self:stretch;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(90deg,#E9EDF3,#fff 30%)}
   .lead{font-size:1.25rem}
+  .case-stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
   .maze{grid-template-columns:1fr auto 1fr;gap:20px}
   .maze-route{display:block}
   .panel{padding:30px 34px 34px}
@@ -375,6 +394,31 @@ footer a{color:#DCE4F7}
     </div>
   </div>
   <div class="shelf-edge" aria-hidden="true"><span class="tag">R$ 499,90 · un.</span></div>
+</section>
+
+<section class="case on-navy" id="case" aria-labelledby="case-h">
+  <div class="wrap">
+    <p class="eyebrow">Case real · Marmoraria Atenas (Campinas e RMC)</p>
+    <h2 id="case-h" class="cereal y">Validamos a procura antes de construir a operação.</h2>
+    <p class="sub">Antes de estruturar a operação, usamos um site regional, Perfil da Empresa no Google e busca paga para testar se havia procura real por marmoraria na Região Metropolitana de Campinas.</p>
+    <dl class="case-stats">
+      <div><dt>R$ 40</dt><dd>investidos em 7 dias de Google Ads</dd></div>
+      <div><dt>1.163</dt><dd>aparições em pesquisas locais</dd></div>
+      <div><dt>73</dt><dd>cliques qualificados</dd></div>
+      <div><dt>10</dt><dd>pedidos reais de orçamento durante a campanha</dd></div>
+    </dl>
+    <ul class="case-metrics" aria-label="Métricas da campanha">
+      <li>CTR de 6,28%</li>
+      <li>CPC médio de R$ 0,55</li>
+      <li>~90% das impressões elegíveis ainda perdidas por ranking</li>
+    </ul>
+    <p class="discovery">O maior limitante não era falta de demanda: mesmo com a campanha rodando, participávamos de uma pequena parcela dos leilões disponíveis. As buscas eram de quem já queria contratar: "marmoraria perto de mim", "marmoraria em Campinas", "marmoraria Sumaré", "marmoraria Indaiatuba".</p>
+    <p class="rigor">Os pedidos chegaram durante a campanha, mas podem ter vindo de anúncios, busca orgânica ou Perfil da Empresa. Associação observada, não atribuição causal.</p>
+    <div class="case-actions">
+      <a class="btn yellow" href="https://marmoreatenas.online" target="_blank" rel="noopener">Ver o site da Marmoraria Atenas</a>
+      <a class="wa" href="#" data-msg="Olá! Quero validar meu negócio.">Quero validar meu negócio</a>
+    </div>
+  </div>
 </section>
 
 <section class="back" id="como" aria-labelledby="como-h">
