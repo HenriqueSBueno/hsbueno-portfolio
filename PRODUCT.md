@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS/JS, single page (`index.html`), deployed on Vercel from GitHub (`HenriqueSBueno/hsbueno-portfolio`). No build step.
+Static HTML/CSS/JS, single page (`index.html`), live at https://hbueno.online (www redirects to apex), deployed on Vercel from GitHub (`HenriqueSBueno/hsbueno-portfolio`). No build step.
 
 ## Users
 
