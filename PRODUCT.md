@@ -27,7 +27,7 @@ Built personally by Henrique Bueno, a performance-marketing and data analyst (6+
 - Offer: landing page de R$999,90 por R$499,90 (pagamento único) + domínio grátis no primeiro ano (from the second year the domain renewal is the business owner's responsibility); pronta em até 1 dia.
 - Payment: Pix or credit card with installments (number of installments agreed on WhatsApp).
 - Add-on: 1 ano de suporte de R$99,90 por R$49,90 mensais.
-- Contact: WhatsApp (19) 99439-5599 → `https://wa.me/5519994395599`.
+- Contact: WhatsApp (19) 95873-6939 → `https://wa.me/5519958736939`.
 - LinkedIn: https://www.linkedin.com/in/hsbueno/
 - Copy in Brazilian Portuguese, plain language for laypeople.
 
@@ -59,3 +59,11 @@ Built personally by Henrique Bueno, a performance-marketing and data analyst (6+
 - "Trabalhos realizados" kept as the user's label; the shelf intro states only Marmoraria Atenas is live, cards keep DEMO / NO AR markers and the FAQ explains the difference.
 - No generated photos (gpt-image-2) for prototypes: each prototype carries its world through type, colour and drawn objects, which avoids the generic AI-photo look and extra cost.
 - Straight-down navy extrusion stays as a house rule of the cereal-box world (documented in DESIGN.md).
+
+## Decisions (2026-10-22)
+
+- Visual redesign to a sober agency language (references: Pentagram, Wolff Olins, Collins). The cereal-aisle system is archived in `DESIGN-corredor-de-cereais.md`; prototypes keep their own styles.
+- Copy drops the supermarket metaphor (prateleira, caixa, letras miúdas) while keeping every fact, price and disclaimer. "Protótipos" are presented as "Estudos" (fictitious) and "Trabalhos realizados" as "Trabalhos", with the DEMO / NO AR tags kept.
+- Brand mark: "HB" monogram; WhatsApp profile and cover assets in `marca/`.
+- Sales narrative (same day): lead with the question "Você aparece quando procuram o seu serviço?", then sourced big numbers (Think with Google, Backlinko, Google/SOASTA 2017, web.dev Vodafone) and an illustrative simulator (clicks by position × abandonment by speed, labelled as non-promise), then the Atenas proof. "Pronto em até 24h" is held back for the closing ("Isso pode ser resolvido hoje mesmo. Tudo pronto até amanhã."). Sources are linked on the page; numbers without a primary source (Deloitte, Brazil-specific) are excluded.
+- WhatsApp CTAs (site and prototypes) switched to the commercial number (19) 95873-6939; the personal number stays out of prospecting (2026-10-22).
