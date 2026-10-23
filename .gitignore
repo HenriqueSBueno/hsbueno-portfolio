@@ -5,3 +5,6 @@ shots/
 .impeccable/*.png
 .impeccable/live/
 .vercel
+.env*
+node_modules/
+test-results/

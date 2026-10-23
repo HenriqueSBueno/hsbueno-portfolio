@@ -1,0 +1,9 @@
+{
+  "name": "hsbueno-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test", "stripe:setup": "node scripts/stripe-setup.mjs" },
+  "engines": { "node": "22.x" },
+  "dependencies": { "stripe": "23.0.1" },
+  "devDependencies": { "playwright": "1.56.1" }
+}
